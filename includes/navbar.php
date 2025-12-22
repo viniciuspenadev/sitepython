@@ -1,0 +1,102 @@
+<?php
+$current_page = basename($_SERVER['PHP_SELF']);
+$is_home = ($current_page == 'index.php');
+$home_link = $is_home ? '#' : 'index.php';
+?>
+<!-- Navigation (Centralized) -->
+<nav class="fixed top-0 w-full z-50 transition-all duration-300 pt-4 px-4" id="navbar">
+    <div class="max-w-7xl mx-auto bg-white/80 backdrop-blur-md rounded-2xl shadow-lg border border-white/40 transition-all duration-300"
+        id="nav-container">
+        <div class="px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="<?php echo $home_link; ?>" class="flex-shrink-0 flex items-center gap-2 group">
+                    <img src="https://pythonlogistics.com/wp-content/uploads/2020/10/logo-python.png"
+                        alt="Python Logistics"
+                        class="h-10 w-auto group-hover:scale-105 transition-transform duration-300">
+                </a>
+
+                <!-- Desktop Menu -->
+                <div
+                    class="hidden md:flex space-x-1 items-center bg-gray-100/50 p-1.5 rounded-full border border-gray-200/50">
+                    <a href="<?php echo $home_link; ?>"
+                        class="px-5 py-2 text-sm font-semibold text-gray-700 rounded-full hover:bg-white hover:text-primary hover:shadow-sm transition-all duration-300"><?php echo $txt['nav_home']; ?></a>
+
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="px-5 py-2 text-sm font-semibold text-gray-700 rounded-full hover:bg-white hover:text-primary hover:shadow-sm transition-all duration-300 flex items-center gap-1">
+                            <?php echo $txt['nav_services']; ?> <i
+                                class="fa-solid fa-chevron-down text-xs opacity-50 bg-transparent"></i>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute top-full left-0 mt-2 w-56 bg-white/90 backdrop-blur-md rounded-2xl shadow-xl border border-white/40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                            <div class="p-2">
+                                <a href="servicos_aereo.php?lang=<?php echo $lang; ?>"
+                                    class="block px-4 py-3 rounded-xl hover:bg-secondary/10 hover:text-secondary transition-colors text-sm font-medium flex items-center gap-3">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
+                                        <i class="fa-solid fa-plane-up"></i>
+                                    </div>
+                                    <?php echo $txt['serv_air_title']; ?>
+                                </a>
+                                <a href="servicos_maritimo.php?lang=<?php echo $lang; ?>"
+                                    class="block px-4 py-3 rounded-xl hover:bg-secondary/10 hover:text-secondary transition-colors text-sm font-medium flex items-center gap-3">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
+                                        <i class="fa-solid fa-ship"></i>
+                                    </div>
+                                    <?php echo $txt['serv_ocean_title']; ?>
+                                </a>
+                                <a href="<?php echo $is_home ? '#road' : 'index_v3.php#road'; ?>"
+                                    class="block px-4 py-3 rounded-xl hover:bg-secondary/10 hover:text-secondary transition-colors text-sm font-medium flex items-center gap-3">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
+                                        <i class="fa-solid fa-truck-fast"></i>
+                                    </div>
+                                    <?php echo $txt['serv_road_title']; ?>
+                                </a>
+                                <a href="<?php echo $is_home ? '#warehousing' : 'index_v3.php#warehousing'; ?>"
+                                    class="block px-4 py-3 rounded-xl hover:bg-secondary/10 hover:text-secondary transition-colors text-sm font-medium flex items-center gap-3">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
+                                        <i class="fa-solid fa-warehouse"></i>
+                                    </div>
+                                    <?php echo $txt['serv_warehouse_title']; ?>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="<?php echo $is_home ? '#about' : 'index_v3.php#about'; ?>"
+                        class="px-5 py-2 text-sm font-semibold text-gray-700 rounded-full hover:bg-white hover:text-primary hover:shadow-sm transition-all duration-300"><?php echo $txt['nav_about']; ?></a>
+                    <a href="<?php echo $is_home ? '#quote' : 'index_v3.php#quote'; ?>"
+                        class="px-5 py-2 text-sm font-semibold text-gray-700 rounded-full hover:bg-white hover:text-primary hover:shadow-sm transition-all duration-300"><?php echo $txt['nav_quote']; ?></a>
+                </div>
+
+                <!-- Right Actions -->
+                <div class="hidden md:flex items-center gap-4">
+                    <!-- Language Switcher -->
+                    <div
+                        class="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer relative group">
+                        <a href="?lang=en"
+                            class="opacity-50 hover:opacity-100 transition-opacity <?php echo $lang == 'en' ? '!opacity-100 scale-110' : ''; ?>">
+                            <img src="https://flagcdn.com/w20/us.png" alt="EN" class="rounded-sm shadow-sm">
+                        </a>
+                        <span class="text-gray-300">|</span>
+                        <a href="?lang=pt"
+                            class="opacity-50 hover:opacity-100 transition-opacity <?php echo $lang == 'pt' ? '!opacity-100 scale-110' : ''; ?>">
+                            <img src="https://flagcdn.com/w20/br.png" alt="PT" class="rounded-sm shadow-sm">
+                        </a>
+                    </div>
+
+                    <a href="<?php echo $is_home ? '#quote' : 'index_v3.php#quote'; ?>"
+                        class="px-6 py-2.5 bg-secondary text-white font-bold rounded-xl hover:bg-primary transition-all duration-300 shadow-lg shadow-secondary/20 transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <?php echo $txt['btn_quote']; ?> <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

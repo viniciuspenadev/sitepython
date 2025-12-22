@@ -1,0 +1,8 @@
+backlog/
+*.md
+.git/
+.gitignore
+README.md
+ORGANIZACAO_COMPLETA.md
+DEPLOY_PRODUCAO.md
+EASYPANEL_DEPLOY.md
