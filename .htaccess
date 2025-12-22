@@ -5,8 +5,10 @@ DirectoryIndex index.php
 <IfModule mod_rewrite.c>
     RewriteEngine On
     
-    # Forçar HTTPS (ativo para produção)
-    RewriteCond %{HTTPS} off
+    # Forçar HTTPS (compatível com proxy reverso)
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteCond %{HTTPS} off [OR]
+    RewriteCond %{HTTP:X-Forwarded-Proto} =""
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     
     # Prevenir acesso a pastas de sistema
