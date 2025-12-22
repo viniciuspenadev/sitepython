@@ -141,6 +141,9 @@ $txt = $t[$lang];
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Modern CSS (Menu Mobile) -->
+    <link rel="stylesheet" href="assets/css/modern.css">
+
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -412,6 +415,9 @@ $txt = $t[$lang];
             }
         });
     </script>
+
+    <!-- Mobile Menu Script -->
+    <script src="assets/js/mobile-menu.js"></script>
 </body>
 
 </html>

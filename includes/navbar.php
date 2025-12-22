@@ -96,7 +96,109 @@ $home_link = $is_home ? '#' : 'index.php';
                         <?php echo $txt['btn_quote']; ?> <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
                 </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn"
+                    class="md:hidden relative w-10 h-10 flex items-center justify-center focus:outline-none z-50"
+                    aria-label="Toggle menu">
+                    <div class="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
             </div>
         </div>
     </div>
 </nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="mobile-menu-overlay">
+    <div class="mobile-menu-content">
+        <!-- Mobile Menu Header -->
+        <div class="mobile-menu-header">
+            <img src="https://pythonlogistics.com/wp-content/uploads/2020/10/logo-python.png" alt="Python Logistics"
+                class="h-10 w-auto">
+            <button id="mobile-menu-close" class="mobile-menu-close-btn" aria-label="Close menu">
+                <i class="fa-solid fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Links -->
+        <nav class="mobile-menu-nav">
+            <a href="<?php echo $home_link; ?>" class="mobile-menu-link">
+                <i class="fa-solid fa-home"></i>
+                <span><?php echo $txt['nav_home']; ?></span>
+                <i class="fa-solid fa-chevron-right text-xs opacity-30"></i>
+            </a>
+
+            <!-- Services Dropdown Mobile -->
+            <div class="mobile-menu-dropdown">
+                <button class="mobile-menu-link mobile-dropdown-toggle">
+                    <i class="fa-solid fa-box"></i>
+                    <span><?php echo $txt['nav_services']; ?></span>
+                    <i class="fa-solid fa-chevron-down text-xs dropdown-arrow"></i>
+                </button>
+                <div class="mobile-dropdown-content">
+                    <a href="servicos_aereo.php?lang=<?php echo $lang; ?>" class="mobile-submenu-link">
+                        <div class="w-10 h-10 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
+                            <i class="fa-solid fa-plane-up"></i>
+                        </div>
+                        <span><?php echo $txt['serv_air_title']; ?></span>
+                    </a>
+                    <a href="servicos_maritimo.php?lang=<?php echo $lang; ?>" class="mobile-submenu-link">
+                        <div class="w-10 h-10 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
+                            <i class="fa-solid fa-ship"></i>
+                        </div>
+                        <span><?php echo $txt['serv_ocean_title']; ?></span>
+                    </a>
+                    <a href="<?php echo $is_home ? '#road' : 'index_v3.php#road'; ?>" class="mobile-submenu-link">
+                        <div class="w-10 h-10 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <span><?php echo $txt['serv_road_title']; ?></span>
+                    </a>
+                    <a href="<?php echo $is_home ? '#warehousing' : 'index_v3.php#warehousing'; ?>"
+                        class="mobile-submenu-link">
+                        <div class="w-10 h-10 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
+                            <i class="fa-solid fa-warehouse"></i>
+                        </div>
+                        <span><?php echo $txt['serv_warehouse_title']; ?></span>
+                    </a>
+                </div>
+            </div>
+
+            <a href="<?php echo $is_home ? '#about' : 'index_v3.php#about'; ?>" class="mobile-menu-link">
+                <i class="fa-solid fa-info-circle"></i>
+                <span><?php echo $txt['nav_about']; ?></span>
+                <i class="fa-solid fa-chevron-right text-xs opacity-30"></i>
+            </a>
+
+            <a href="<?php echo $is_home ? '#quote' : 'index_v3.php#quote'; ?>" class="mobile-menu-link">
+                <i class="fa-solid fa-calculator"></i>
+                <span><?php echo $txt['nav_quote']; ?></span>
+                <i class="fa-solid fa-chevron-right text-xs opacity-30"></i>
+            </a>
+        </nav>
+
+        <!-- Mobile Menu Footer -->
+        <div class="mobile-menu-footer">
+            <!-- Language Switcher -->
+            <div class="mobile-lang-switcher">
+                <a href="?lang=en" class="mobile-lang-btn <?php echo $lang == 'en' ? 'active' : ''; ?>">
+                    <img src="https://flagcdn.com/w20/us.png" alt="EN">
+                    <span>English</span>
+                </a>
+                <a href="?lang=pt" class="mobile-lang-btn <?php echo $lang == 'pt' ? 'active' : ''; ?>">
+                    <img src="https://flagcdn.com/w20/br.png" alt="PT">
+                    <span>Português</span>
+                </a>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="<?php echo $is_home ? '#quote' : 'index_v3.php#quote'; ?>" class="mobile-cta-btn">
+                <?php echo $txt['btn_quote']; ?> <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</div>

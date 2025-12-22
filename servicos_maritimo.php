@@ -141,6 +141,9 @@ $txt = $t[$lang];
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Modern CSS (Menu Mobile) -->
+    <link rel="stylesheet" href="assets/css/modern.css">
+
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -195,13 +198,15 @@ $txt = $t[$lang];
                             class="text-center px-6 py-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/10">
                             <i class="fa-solid fa-anchor text-secondary text-2xl mb-1"></i>
                             <div class="text-sm text-gray-300 uppercase tracking-widest">
-                                <?php echo $txt['hero_stat1']; ?></div>
+                                <?php echo $txt['hero_stat1']; ?>
+                            </div>
                         </div>
                         <div
                             class="text-center px-6 py-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/10">
                             <i class="fa-solid fa-satellite-dish text-secondary text-2xl mb-1"></i>
                             <div class="text-sm text-gray-300 uppercase tracking-widest">
-                                <?php echo $txt['hero_stat2']; ?></div>
+                                <?php echo $txt['hero_stat2']; ?>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -239,7 +244,8 @@ $txt = $t[$lang];
                         <i class="fa-solid fa-box-open"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
-                        <?php echo $txt['type_1_title']; ?></h3>
+                        <?php echo $txt['type_1_title']; ?>
+                    </h3>
                     <p class="text-gray-600 text-sm leading-relaxed"><?php echo $txt['type_1_desc']; ?></p>
                 </div>
                 <!-- Service 2 -->
@@ -250,7 +256,8 @@ $txt = $t[$lang];
                         <i class="fa-solid fa-boxes-stacked"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
-                        <?php echo $txt['type_2_title']; ?></h3>
+                        <?php echo $txt['type_2_title']; ?>
+                    </h3>
                     <p class="text-gray-600 text-sm leading-relaxed"><?php echo $txt['type_2_desc']; ?></p>
                 </div>
                 <!-- Service 3 -->
@@ -261,7 +268,8 @@ $txt = $t[$lang];
                         <i class="fa-solid fa-snowflake"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
-                        <?php echo $txt['type_3_title']; ?></h3>
+                        <?php echo $txt['type_3_title']; ?>
+                    </h3>
                     <p class="text-gray-600 text-sm leading-relaxed"><?php echo $txt['type_3_desc']; ?></p>
                 </div>
                 <!-- Service 4 -->
@@ -272,7 +280,8 @@ $txt = $t[$lang];
                         <i class="fa-solid fa-industry"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
-                        <?php echo $txt['type_4_title']; ?></h3>
+                        <?php echo $txt['type_4_title']; ?>
+                    </h3>
                     <p class="text-gray-600 text-sm leading-relaxed"><?php echo $txt['type_4_desc']; ?></p>
                 </div>
             </div>
@@ -288,7 +297,8 @@ $txt = $t[$lang];
                     <span
                         class="text-secondary font-bold tracking-wider uppercase text-sm"><?php echo $txt['adv_title']; ?></span>
                     <h2 class="text-3xl font-heading font-bold text-primary-dark mt-2 mb-6">
-                        <?php echo $txt['adv_1_title']; ?> & <?php echo $txt['adv_2_title']; ?></h2>
+                        <?php echo $txt['adv_1_title']; ?> & <?php echo $txt['adv_2_title']; ?>
+                    </h2>
                     <div class="prose text-gray-600 leading-relaxed space-y-6">
                         <p><?php echo $txt['adv_1_desc']; ?></p>
                         <p><?php echo $txt['adv_2_desc']; ?></p>
@@ -347,7 +357,8 @@ $txt = $t[$lang];
     <section class="py-16 bg-white border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4">
             <h4 class="text-center text-gray-400 font-bold uppercase tracking-widest text-sm mb-12">
-                <?php echo $txt['process_title']; ?></h4>
+                <?php echo $txt['process_title']; ?>
+            </h4>
             <div class="flex flex-wrap justify-between items-center text-center gap-8 relative opacity-80">
                 <!-- Connecting Line -->
                 <div class="hidden md:block absolute top-[2rem] left-0 w-full h-0.5 bg-gray-200 -z-10"></div>
@@ -355,31 +366,36 @@ $txt = $t[$lang];
                 <div class="flex-1 min-w-[150px]">
                     <div
                         class="w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full flex items-center justify-center text-secondary text-xl mb-4 shadow-sm">
-                        <i class="fa-solid fa-calendar-check"></i></div>
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
                     <span class="text-sm font-bold text-gray-700"><?php echo $txt['step1']; ?></span>
                 </div>
                 <div class="flex-1 min-w-[150px]">
                     <div
                         class="w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full flex items-center justify-center text-secondary text-xl mb-4 shadow-sm">
-                        <i class="fa-solid fa-dolly"></i></div>
+                        <i class="fa-solid fa-dolly"></i>
+                    </div>
                     <span class="text-sm font-bold text-gray-700"><?php echo $txt['step2']; ?></span>
                 </div>
                 <div class="flex-1 min-w-[150px]">
                     <div
                         class="w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full flex items-center justify-center text-secondary text-xl mb-4 shadow-sm">
-                        <i class="fa-solid fa-anchor"></i></div>
+                        <i class="fa-solid fa-anchor"></i>
+                    </div>
                     <span class="text-sm font-bold text-gray-700"><?php echo $txt['step3']; ?></span>
                 </div>
                 <div class="flex-1 min-w-[150px]">
                     <div
                         class="w-16 h-16 mx-auto bg-primary text-white rounded-full flex items-center justify-center text-xl mb-4 shadow-lg scale-110">
-                        <i class="fa-solid fa-ship"></i></div>
+                        <i class="fa-solid fa-ship"></i>
+                    </div>
                     <span class="text-sm font-bold text-primary"><?php echo $txt['step4']; ?></span>
                 </div>
                 <div class="flex-1 min-w-[150px]">
                     <div
                         class="w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full flex items-center justify-center text-secondary text-xl mb-4 shadow-sm">
-                        <i class="fa-solid fa-truck-fast"></i></div>
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
                     <span class="text-sm font-bold text-gray-700"><?php echo $txt['step5']; ?></span>
                 </div>
             </div>
@@ -403,6 +419,9 @@ $txt = $t[$lang];
             }
         });
     </script>
+
+    <!-- Mobile Menu Script -->
+    <script src="assets/js/mobile-menu.js"></script>
 </body>
 
 </html>

@@ -185,6 +185,9 @@ $txt = $t[$lang];
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Modern CSS (Menu Mobile e outros estilos) -->
+    <link rel="stylesheet" href="assets/css/modern.css">
+
     <!-- Tailwind CSS with BRAND COCONFIG -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -767,50 +770,52 @@ $txt = $t[$lang];
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class=" grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-            <div>
-                <img src="https://pythonlogistics.com/wp-content/uploads/2020/10/logo-python.png" alt="Python"
-                    class="h-8 mb-6 brightness-0 invert">
-                <p class="text-gray-300 mb-6">
-                    <?php echo $txt['footer_desc']; ?>
-                </p>
-                <div class="flex gap-4 text-white/60">
-                    <a href="#" class="hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                <div>
+                    <img src="https://pythonlogistics.com/wp-content/uploads/2020/10/logo-python.png" alt="Python"
+                        class="h-8 mb-6 brightness-0 invert">
+                    <p class="text-gray-300 mb-6">
+                        <?php echo $txt['footer_desc']; ?>
+                    </p>
+                    <div class="flex gap-4 text-white/60">
+                        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <h4 class="font-bold text-white mb-6">
-                    <?php echo $txt['quick_links']; ?></h4>
+                <div>
+                    <h4 class="font-bold text-white mb-6">
+                        <?php echo $txt['quick_links']; ?>
+                    </h4>
                     <ul class="space-y-3 text-gray-300">
                         <li><a href="#" class="hover:text-white transition-colors"><?php echo $txt['nav_home']; ?></a>
-                    </li>
-                    <li><a href="#about" class="hover:text-white transition-colors">
-                            <?php echo $txt['nav_about']; ?>
-                        </a></li>
-                    <li><a href="#services" class="hover:text-white transition-colors"><?php echo $txt['nav_services']; ?></a></li>
+                        </li>
+                        <li><a href="#about" class="hover:text-white transition-colors">
+                                <?php echo $txt['nav_about']; ?>
+                            </a></li>
+                        <li><a href="#services"
+                                class="hover:text-white transition-colors"><?php echo $txt['nav_services']; ?></a></li>
                         <li><a href=" #quote" class="hover:text-white transition-colors">
-                            <?php echo $txt['nav_quote']; ?>
-                        </a></li>
+                                <?php echo $txt['nav_quote']; ?>
+                            </a></li>
                     </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-6">
+                        <?php echo $txt['contact_us']; ?>
+                    </h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><i class="fa-solid fa-location-dot mr-2 text-secondary"></i> 1915 NW 79th Avenue - Doral, FL
+                            33126</li>
+                        <li><i class="fa-solid fa-phone mr-2 text-secondary"></i> +1 305-901-5931</li>
+                        <li><i class="fa-solid fa-envelope mr-2 text-secondary"></i> contact@pythonlogistics.com</li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <h4 class="font-bold text-white mb-6">
-                    <?php echo $txt['contact_us']; ?>
-                </h4>
-                <ul class="space-y-3 text-gray-300">
-                    <li><i class="fa-solid fa-location-dot mr-2 text-secondary"></i> 1915 NW 79th Avenue - Doral, FL
-                        33126</li>
-                    <li><i class="fa-solid fa-phone mr-2 text-secondary"></i> +1 305-901-5931</li>
-                         <li><i class="fa-solid fa-envelope mr-2 text-secondary"></i> contact@pythonlogistics.com</li>
-                </ul>
+            <div class="text-center pt-8 border-t border-primary-dark text-gray-400">
+                <p>
+                    <?php echo $txt['copyright']; ?>
+                </p>
             </div>
-        </div>
-        <div class="text-center pt-8 border-t border-primary-dark text-gray-400">
-            <p>
-                <?php echo $txt['copyright']; ?>
-            </p>
-        </div>
         </div>
     </footer>
 
@@ -972,6 +977,10 @@ $txt = $t[$lang];
         // Start
         window.addEventListener('load', startSlider);
     </script>
+
+    <!-- Mobile Menu Script -->
+    <script src="assets/js/mobile-menu.js"></script>
 </body>
+
 
 </html>
