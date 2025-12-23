@@ -531,9 +531,9 @@ $txt = $t[$lang];
             <div class="relative w-full max-w-5xl mx-auto">
                 <img src="assets/images/mapa mundi aberto.svg" alt="World Map" class="w-full h-auto opacity-80">
 
-                <!-- Pulsing Pin 1: North America (New York) -->
+                <!-- Pulsing Pin 1: Miami (Headquarters) - Badge sempre visível -->
                 <div
-                    class="absolute top-[35%] left-[25%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
+                    class="absolute top-[48%] left-[24%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
                     <span class="absolute inline-flex h-8 w-8 rounded-full bg-secondary opacity-50 animate-ping"></span>
                     <span
                         class="relative inline-flex rounded-full h-4 w-4 bg-primary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
@@ -542,7 +542,58 @@ $txt = $t[$lang];
                         <span
                             class="uppercase tracking-wider text-[10px] text-gray-400"><?php echo $txt['loc_headquarters']; ?>
                         </span>
-                        <span class="text-sm">New York, USA</span>
+                        <span class="text-sm">Miami, USA</span>
+                        <div
+                            class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pin 1b: Los Angeles - Badge apenas no hover -->
+                <div
+                    class="absolute top-[40%] left-[15%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
+                    <span
+                        class="absolute inline-flex h-6 w-6 rounded-full bg-secondary opacity-30 animate-ping delay-200"></span>
+                    <span
+                        class="relative inline-flex rounded-full h-3 w-3 bg-secondary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
+                    <div
+                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-secondary border border-secondary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+                        <span class="uppercase tracking-wider text-[10px] text-gray-400">West Coast</span>
+                        <span class="text-sm">Los Angeles, USA</span>
+                        <div
+                            class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pin 1c: Chicago - Badge apenas no hover -->
+                <div
+                    class="absolute top-[38%] left-[22%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
+                    <span
+                        class="absolute inline-flex h-6 w-6 rounded-full bg-secondary opacity-30 animate-ping delay-400"></span>
+                    <span
+                        class="relative inline-flex rounded-full h-3 w-3 bg-secondary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
+                    <div
+                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-secondary border border-secondary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+                        <span class="uppercase tracking-wider text-[10px] text-gray-400">Midwest</span>
+                        <span class="text-sm">Chicago, USA</span>
+                        <div
+                            class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pin 1d: Houston - Badge apenas no hover -->
+                <div
+                    class="absolute top-[52%] left-[21%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
+                    <span
+                        class="absolute inline-flex h-6 w-6 rounded-full bg-secondary opacity-30 animate-ping delay-600"></span>
+                    <span
+                        class="relative inline-flex rounded-full h-3 w-3 bg-secondary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
+                    <div
+                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-secondary border border-secondary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+                        <span class="uppercase tracking-wider text-[10px] text-gray-400">South</span>
+                        <span class="text-sm">Houston, USA</span>
                         <div
                             class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white">
                         </div>
