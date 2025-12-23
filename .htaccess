@@ -4,6 +4,7 @@ DirectoryIndex index.php
 # Habilitar rewrite
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    RewriteBase /
     
     # Forçar HTTPS (compatível com proxy reverso)
     RewriteCond %{HTTP:X-Forwarded-Proto} !https
@@ -14,6 +15,25 @@ DirectoryIndex index.php
     # Prevenir acesso a pastas de sistema
     RewriteRule ^backlog/ - [F,L]
     RewriteRule ^includes/ - [F,L]
+    
+    # =========================================
+    # URLs Amigáveis (Remover .php)
+    # =========================================
+    
+    # Redirect URLs antigas em português para inglês (SEO - 301)
+    RewriteRule ^servicos_aereo(.*)$ air-freight$1 [R=301,L]
+    RewriteRule ^servicos_maritimo(.*)$ ocean-freight$1 [R=301,L]
+    
+    # Redirecionar URLs antigas com .php para URLs sem extensão (SEO - 301)
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+    RewriteCond %{REQUEST_FILENAME} !index.php
+    RewriteRule ^ %1 [R=301,L,QSA]
+    
+    # Reescrever URLs sem extensão para .php (interno)
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME}\.php -f
+    RewriteRule ^([^/]+)/?$ $1.php [L,QSA]
 </IfModule>
 
 # Compressão Gzip

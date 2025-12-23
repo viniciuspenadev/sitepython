@@ -33,7 +33,7 @@ $home_link = $is_home ? '#' : 'index.php';
                         <div
                             class="absolute top-full left-0 mt-2 w-56 bg-white/90 backdrop-blur-md rounded-2xl shadow-xl border border-white/40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 overflow-hidden">
                             <div class="p-2">
-                                <a href="servicos_aereo.php?lang=<?php echo $lang; ?>"
+                                <a href="air-freight?lang=<?php echo $lang; ?>"
                                     class="block px-4 py-3 rounded-xl hover:bg-secondary/10 hover:text-secondary transition-colors text-sm font-medium flex items-center gap-3">
                                     <div
                                         class="w-8 h-8 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
@@ -41,7 +41,7 @@ $home_link = $is_home ? '#' : 'index.php';
                                     </div>
                                     <?php echo $txt['serv_air_title']; ?>
                                 </a>
-                                <a href="servicos_maritimo.php?lang=<?php echo $lang; ?>"
+                                <a href="ocean-freight?lang=<?php echo $lang; ?>"
                                     class="block px-4 py-3 rounded-xl hover:bg-secondary/10 hover:text-secondary transition-colors text-sm font-medium flex items-center gap-3">
                                     <div
                                         class="w-8 h-8 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
@@ -49,7 +49,7 @@ $home_link = $is_home ? '#' : 'index.php';
                                     </div>
                                     <?php echo $txt['serv_ocean_title']; ?>
                                 </a>
-                                <a href="<?php echo $is_home ? '#road' : 'index_v3.php#road'; ?>"
+                                <a href="<?php echo $is_home ? '#road' : 'index#road'; ?>"
                                     class="block px-4 py-3 rounded-xl hover:bg-secondary/10 hover:text-secondary transition-colors text-sm font-medium flex items-center gap-3">
                                     <div
                                         class="w-8 h-8 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
@@ -57,7 +57,7 @@ $home_link = $is_home ? '#' : 'index.php';
                                     </div>
                                     <?php echo $txt['serv_road_title']; ?>
                                 </a>
-                                <a href="<?php echo $is_home ? '#warehousing' : 'index_v3.php#warehousing'; ?>"
+                                <a href="<?php echo $is_home ? '#warehousing' : 'index#warehousing'; ?>"
                                     class="block px-4 py-3 rounded-xl hover:bg-secondary/10 hover:text-secondary transition-colors text-sm font-medium flex items-center gap-3">
                                     <div
                                         class="w-8 h-8 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
@@ -69,9 +69,9 @@ $home_link = $is_home ? '#' : 'index.php';
                         </div>
                     </div>
 
-                    <a href="<?php echo $is_home ? '#about' : 'index_v3.php#about'; ?>"
+                    <a href="<?php echo $is_home ? '#about' : 'index#about'; ?>"
                         class="px-5 py-2 text-sm font-semibold text-gray-700 rounded-full hover:bg-white hover:text-primary hover:shadow-sm transition-all duration-300"><?php echo $txt['nav_about']; ?></a>
-                    <a href="<?php echo $is_home ? '#quote' : 'index_v3.php#quote'; ?>"
+                    <a href="<?php echo $is_home ? '#quote' : 'index#quote'; ?>"
                         class="px-5 py-2 text-sm font-semibold text-gray-700 rounded-full hover:bg-white hover:text-primary hover:shadow-sm transition-all duration-300"><?php echo $txt['nav_quote']; ?></a>
                 </div>
 
@@ -91,7 +91,7 @@ $home_link = $is_home ? '#' : 'index.php';
                         </a>
                     </div>
 
-                    <a href="<?php echo $is_home ? '#quote' : 'index_v3.php#quote'; ?>"
+                    <a href="<?php echo $is_home ? '#quote' : 'index#quote'; ?>"
                         class="px-6 py-2.5 bg-secondary text-white font-bold rounded-xl hover:bg-primary transition-all duration-300 shadow-lg shadow-secondary/20 transform hover:-translate-y-0.5 flex items-center gap-2">
                         <?php echo $txt['btn_quote']; ?> <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
@@ -140,25 +140,25 @@ $home_link = $is_home ? '#' : 'index.php';
                     <i class="fa-solid fa-chevron-down text-xs dropdown-arrow"></i>
                 </button>
                 <div class="mobile-dropdown-content">
-                    <a href="servicos_aereo.php?lang=<?php echo $lang; ?>" class="mobile-submenu-link">
+                    <a href="air-freight?lang=<?php echo $lang; ?>" class="mobile-submenu-link">
                         <div class="w-10 h-10 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
                             <i class="fa-solid fa-plane-up"></i>
                         </div>
                         <span><?php echo $txt['serv_air_title']; ?></span>
                     </a>
-                    <a href="servicos_maritimo.php?lang=<?php echo $lang; ?>" class="mobile-submenu-link">
+                    <a href="ocean-freight?lang=<?php echo $lang; ?>" class="mobile-submenu-link">
                         <div class="w-10 h-10 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
                             <i class="fa-solid fa-ship"></i>
                         </div>
                         <span><?php echo $txt['serv_ocean_title']; ?></span>
                     </a>
-                    <a href="<?php echo $is_home ? '#road' : 'index_v3.php#road'; ?>" class="mobile-submenu-link">
+                    <a href="<?php echo $is_home ? '#road' : 'index#road'; ?>" class="mobile-submenu-link">
                         <div class="w-10 h-10 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
                             <i class="fa-solid fa-truck-fast"></i>
                         </div>
                         <span><?php echo $txt['serv_road_title']; ?></span>
                     </a>
-                    <a href="<?php echo $is_home ? '#warehousing' : 'index_v3.php#warehousing'; ?>"
+                    <a href="<?php echo $is_home ? '#warehousing' : 'index#warehousing'; ?>"
                         class="mobile-submenu-link">
                         <div class="w-10 h-10 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
                             <i class="fa-solid fa-warehouse"></i>
@@ -168,13 +168,13 @@ $home_link = $is_home ? '#' : 'index.php';
                 </div>
             </div>
 
-            <a href="<?php echo $is_home ? '#about' : 'index_v3.php#about'; ?>" class="mobile-menu-link">
+            <a href="<?php echo $is_home ? '#about' : 'index#about'; ?>" class="mobile-menu-link">
                 <i class="fa-solid fa-info-circle"></i>
                 <span><?php echo $txt['nav_about']; ?></span>
                 <i class="fa-solid fa-chevron-right text-xs opacity-30"></i>
             </a>
 
-            <a href="<?php echo $is_home ? '#quote' : 'index_v3.php#quote'; ?>" class="mobile-menu-link">
+            <a href="<?php echo $is_home ? '#quote' : 'index#quote'; ?>" class="mobile-menu-link">
                 <i class="fa-solid fa-calculator"></i>
                 <span><?php echo $txt['nav_quote']; ?></span>
                 <i class="fa-solid fa-chevron-right text-xs opacity-30"></i>
@@ -196,7 +196,7 @@ $home_link = $is_home ? '#' : 'index.php';
             </div>
 
             <!-- CTA Button -->
-            <a href="<?php echo $is_home ? '#quote' : 'index_v3.php#quote'; ?>" class="mobile-cta-btn">
+            <a href="<?php echo $is_home ? '#quote' : 'index#quote'; ?>" class="mobile-cta-btn">
                 <?php echo $txt['btn_quote']; ?> <i class="fa-solid fa-arrow-right"></i>
             </a>
         </div>
