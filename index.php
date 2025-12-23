@@ -1,7 +1,7 @@
 <?php
 // Language Logic (Ported from V2)
 $lang = $_GET['lang'] ?? 'en';
-if (!in_array($lang, ['en', 'pt']))
+if (!in_array($lang, ['en', 'pt', 'es']))
     $lang = 'en';
 
 $t = [
@@ -22,9 +22,13 @@ $t = [
         'slide2_desc' => 'Delivering your urgent cargo to any destination worldwide with top-tier airlines.',
         'slide2_btn' => 'Get an Air Quote',
         'slide3_sub' => 'Ocean Freight',
-        'slide3_title' => 'Seamless Ocean Transport.',
-        'slide3_desc' => 'Cost-effective and sustainable maritime shipping for your large volume goods.',
+        'slide3_title' => 'Seamless Shipping Across Borders.',
+        'slide3_desc' => 'Cost-effective and sustainable ocean freight for your high-volume goods.',
         'slide3_btn' => 'View Ocean Services',
+        'slide4_sub' => 'Pickup & Delivery',
+        'slide4_title' => 'Nationwide Coverage.',
+        'slide4_desc' => 'Comprehensive pickup and delivery services throughout the entire United States, door-to-door.',
+        'slide4_btn' => 'Request Pickup',
         'trusted_title' => 'Trusted by Industry Leaders Worldwide',
         'years_exp' => 'Years Experience',
         'deliv_parcels' => 'Delivered Parcels',
@@ -49,6 +53,10 @@ $t = [
         'serv_road_desc' => 'Flexible road freight services. From small parcels to full truckloads, we handle domestic shipping.',
         'serv_warehouse_title' => 'Warehousing',
         'serv_warehouse_desc' => 'Secure storage and inventory management. Our facilities are equipped to handle diverse goods.',
+        'serv_pickup_title' => 'Pickup & Delivery',
+        'serv_pickup_desc' => 'Nationwide pickup and delivery services across the USA. Door-to-door solutions for your convenience.',
+        'serv_insurance_title' => 'Cargo Insurance',
+        'serv_insurance_desc' => 'Comprehensive cargo protection. Safeguard your shipments with tailored insurance coverage.',
         'quote_sub' => 'Get A Quote',
         'quote_title' => 'Request a Free Estimate',
         'quote_desc' => 'Fill out the form below and we will get back to you with a tailored logistics solution.',
@@ -94,7 +102,7 @@ $t = [
         'btn_quote' => 'Solicitar Cotação',
         'slide1_sub' => 'Soluções de Armazenagem',
         'slide1_title' => 'Otimize Seu Estoque.',
-        'slide1_desc' => 'Soluções de armazenagem seguras, escaláveis e eficientes projetadas para o crescimento do seu negócio.',
+        'slide1_desc' => 'Soluções de armazenag em seguras, escaláveis e eficientes projetadas para o crescimento do seu negócio.',
         'slide1_btn' => 'Explorar Armazenagem',
         'slide2_sub' => 'Frete Aéreo Global',
         'slide2_title' => 'Velocidade Encontra Confiabilidade.',
@@ -104,6 +112,10 @@ $t = [
         'slide3_title' => 'Transporte Marítimo Sem Fronteiras.',
         'slide3_desc' => 'Envio marítimo econômico e sustentável para seus bens de grande volume.',
         'slide3_btn' => 'Ver Serviços Marítimos',
+        'slide4_sub' => 'Coleta & Entrega',
+        'slide4_title' => 'Cobertura Nacional.',
+        'slide4_desc' => 'Serviços completos de coleta e entrega em todo território dos Estados Unidos, porta a porta.',
+        'slide4_btn' => 'Solicitar Coleta',
         'trusted_title' => 'Confiado por Líderes da Indústria Mundialmente',
         'years_exp' => 'Anos de Experiência',
         'deliv_parcels' => 'Pacotes Entregues',
@@ -128,6 +140,10 @@ $t = [
         'serv_road_desc' => 'Serviços flexíveis de frete rodoviário. De pequenos pacotes a cargas completas, cuidamos do transporte doméstico.',
         'serv_warehouse_title' => 'Armazenagem',
         'serv_warehouse_desc' => 'Armazenamento seguro e gestão de estoque. Nossas instalações são equipadas para lidar com diversos bens.',
+        'serv_pickup_title' => 'Coleta & Entrega',
+        'serv_pickup_desc' => 'Serviços de coleta e entrega em todo território dos EUA. Soluções porta a porta para sua conveniência.',
+        'serv_insurance_title' => 'Seguro de Carga',
+        'serv_insurance_desc' => 'Proteção abrangente de carga. Proteja seus envios com cobertura de seguro personalizada.',
         'quote_sub' => 'Faça uma Cotação',
         'quote_title' => 'Solicite um Orçamento Grátis',
         'quote_desc' => 'Preencha o formulário abaixo e retornaremos com uma solução logística sob medida.',
@@ -162,6 +178,93 @@ $t = [
         'loc_europe' => 'Centro Euro',
         'loc_me' => 'Gateway OM',
         'loc_asia' => 'Ásia Pacífico'
+    ],
+    'es' => [
+        'nav_home' => 'Inicio',
+        'nav_about' => 'Acerca de',
+        'nav_services' => 'Servicios',
+        'nav_quote' => 'Cotización',
+        'nav_news' => 'Noticias',
+        'nav_contact' => 'Contacto',
+        'btn_quote' => 'Solicitar Cotización',
+        'slide1_sub' => 'Soluciones de Almacenamiento',
+        'slide1_title' => 'Optimice Su Inventario.',
+        'slide1_desc' => 'Soluciones de almacenamiento seguras, escalables y eficientes diseñadas para el crecimiento de su negocio.',
+        'slide1_btn' => 'Explorar Almacenamiento',
+        'slide2_sub' => 'Flete Aéreo Global',
+        'slide2_title' => 'Velocidad Con Fiabilidad.',
+        'slide2_desc' => 'Entregando su carga urgente a cualquier destino mundial con las mejores aerolíneas.',
+        'slide2_btn' => 'Cotización Aérea',
+        'slide3_sub' => 'Flete Marítimo',
+        'slide3_title' => 'Transporte Marítimo Sin Fronteras.',
+        'slide3_desc' => 'Envío marítimo económico y sostenible para sus mercancías de gran volumen.',
+        'slide3_btn' => 'Ver Servicios Marítimos',
+        'slide4_sub' => 'Recogida y Entrega',
+        'slide4_title' => 'Cobertura Nacional.',
+        'slide4_desc' => 'Servicios completos de recogida y entrega en todo el territorio de los Estados Unidos, puerta a puerta.',
+        'slide4_btn' => 'Solicitar Recogida',
+        'trusted_title' => 'Confiado por Líderes de la Industria a Nivel Mundial',
+        'years_exp' => 'Años de Experiencia',
+        'deliv_parcels' => 'Paquetes Entregados',
+        'global_partners' => 'Socios Globales',
+        'satisfaction' => 'Satisfacción',
+        'about_sub' => 'Quiénes Somos',
+        'about_title' => 'Somos Python Logistics',
+        'about_desc' => 'Python Logistics es líder en la provisión de gestión de cadena de suministro y soluciones logísticas globales. Combinamos experiencia de la industria con tecnología de vanguardia para ofrecer un servicio excepcional.',
+        'feat_tracking' => 'Sistemas de Rastreo en Tiempo Real',
+        'feat_network' => 'Red Global de Transportistas',
+        'feat_success' => 'Gerentes de Éxito Dedicados',
+        'feat_cost' => 'Enrutamiento Rentable',
+        'about_btn' => 'Conozca Más Sobre Nosotros',
+        'services_sub' => 'Lo Que Hacemos',
+        'services_title' => 'Nuestra Experiencia',
+        'services_desc' => 'Ofrecemos una gama completa de servicios logísticos para mantener su negocio en movimiento.',
+        'serv_air_title' => 'Flete Aéreo',
+        'serv_air_desc' => 'Entrega rápida para envíos urgentes. Colaboramos con grandes aerolíneas para garantizar que su carga llegue a tiempo.',
+        'serv_ocean_title' => 'Flete Marítimo',
+        'serv_ocean_desc' => 'Soluciones económicas para grandes envíos. Carga Completa de Contenedor (FCL) y Carga Fraccionada (LCL).',
+        'serv_road_title' => 'Transporte Terrestre',
+        'serv_road_desc' => 'Servicios flexibles de flete terrestre. Desde pequeños paquetes hasta cargas completas, manejamos el transporte doméstico.',
+        'serv_warehouse_title' => 'Almacenamiento',
+        'serv_warehouse_desc' => 'Almacenamiento seguro y gestión de inventario. Nuestras instalaciones están equipadas para manejar diversos productos.',
+        'serv_pickup_title' => 'Recogida y Entrega',
+        'serv_pickup_desc' => 'Servicios de recogida y entrega en todo el territorio de EE.UU. Soluciones puerta a puerta para su conveniencia.',
+        'serv_insurance_title' => 'Seguro de Carga',
+        'serv_insurance_desc' => 'Protección integral de carga. Proteja sus envíos con cobertura de seguro personalizada.',
+        'quote_sub' => 'Solicite una Cotización',
+        'quote_title' => 'Solicite un Presupuesto Gratuito',
+        'quote_desc' => 'Complete el formulario a continuación y nos pondremos en contacto con una solución logística personalizada.',
+        'form_name' => 'Nombre Completo',
+        'form_email' => 'Correo Electrónico',
+        'form_transport' => 'Tipo de Transporte',
+        'form_dest' => 'Destino (Ciudad/País)',
+        'form_msg' => 'Mensaje / Detalles',
+        'form_btn' => 'Enviar Solicitud',
+        'trans_air' => 'Flete Aéreo',
+        'trans_ocean' => 'Flete Marítimo',
+        'trans_road' => 'Transporte Terrestre',
+        'trans_warehouse' => 'Almacenamiento',
+        'blog_sub' => 'Últimas Noticias',
+        'blog_title' => 'Perspectivas Logísticas',
+        'blog_desc' => 'Manténgase actualizado con las últimas tendencias en cadena de suministro y transporte.',
+        'read_more' => 'Leer Más →',
+        'blog1_title' => 'Optimizando Cadenas de Suministro en 2025',
+        'blog1_desc' => 'Estrategias clave para reducir costos y mejorar la eficiencia en el próximo año.',
+        'blog2_title' => 'Tecnologías de Almacenamiento Inteligente',
+        'blog2_desc' => 'Cómo la automatización y la IA están transformando la forma en que almacenamos y gestionamos el inventario.',
+        'blog3_title' => 'Prácticas de Envío Sostenible',
+        'blog3_desc' => 'El futuro de la logística verde y la reducción de la huella de carbono en el flete.',
+        'footer_desc' => 'Python Logistics está comprometida en proporcionar soluciones logísticas eficientes, confiables y seguras a nivel global.',
+        'quick_links' => 'Enlaces Rápidos',
+        'contact_us' => 'Contáctenos',
+        'copyright' => '© 2024 Python Logistics. Todos los derechos reservados.',
+        'map_sub' => 'Presencia Global',
+        'map_title' => 'Conectando el Mundo',
+        'loc_headquarters' => 'Sede Central',
+        'loc_latam' => 'Hub LatAm',
+        'loc_europe' => 'Centro Europeo',
+        'loc_me' => 'Gateway MO',
+        'loc_asia' => 'Asia Pacífico'
     ]
 ];
 $txt = $t[$lang];
@@ -251,13 +354,16 @@ $txt = $t[$lang];
                 id="bg-2"></div>
             <!-- Slide 3 BG -->
             <div class="hero-bg absolute inset-0 bg-cover bg-center transition-all duration-[2000ms] ease-in-out opacity-0 scale-100"
-                style="background-image: url('https://images.unsplash.com/photo-1494412574643-35d32468817e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"
-                id="bg-3"></div>
+                style="background-image: url('assets/images/sliders/maritimo.jpg');" id="bg-3"></div>
+            <!-- Slide 4 BG -->
+            <div class="hero-bg absolute inset-0 bg-cover bg-center transition-all duration-[2000ms] ease-in-out opacity-0 scale-100"
+                style="background-image: url('https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"
+                id="bg-4"></div>
 
             <!-- Overlays -->
-            <div class="absolute inset-0 bg-gray-900/40 mix-blend-multiply"></div>
-            <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/70 to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-90">
+            <div class="absolute inset-0 bg-gray-900/20 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-gray-900/50 via-gray-900/30 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent opacity-90">
             </div>
         </div>
 
@@ -265,7 +371,7 @@ $txt = $t[$lang];
             <div class="grid lg:grid-cols-12 gap-12 items-center">
 
                 <!-- Text Slides -->
-                <div class="lg:col-span-7 relative h-[400px] flex items-center">
+                <div class="lg:col-span-12 relative h-[400px] flex items-center">
 
                     <!-- Slide 1 Text -->
                     <div class="hero-content absolute inset-0 flex flex-col justify-center transition-all duration-1000 transform translate-y-0 opacity-100"
@@ -345,64 +451,32 @@ $txt = $t[$lang];
                         </div>
                     </div>
 
-                </div>
-
-                <!-- Interactive Widget (Right Side) -->
-                <div class="hidden lg:block lg:col-span-1"></div> <!-- Spacer -->
-                <div class="hidden lg:block lg:col-span-4 relative">
-                    <div
-                        class="bg-white/5 backdrop-blur-xl border border-white/20 p-8 rounded-3xl shadow-[0_0_50px_rgba(0,0,0,0.3)] relative overflow-hidden group hover:bg-white/10 transition-colors duration-500">
-                        <!-- Glow Effect -->
-                        <div
-                            class="absolute top-0 right-0 w-40 h-40 bg-secondary/30 rounded-full blur-[60px] -mr-10 -mt-10 animate-pulse">
+                    <!-- Slide 4 Text -->
+                    <div class="hero-content absolute inset-0 flex flex-col justify-center transition-all duration-1000 transform translate-y-8 opacity-0 pointer-events-none"
+                        id="content-4">
+                        <div class="overflow-hidden mb-6">
+                            <span
+                                class="inline-block py-2 px-4 bg-orange-600/80 text-white rounded-full text-sm font-bold tracking-wide uppercase shadow-lg shadow-orange-500/30 backdrop-blur-sm border border-white/20">
+                                <i class="fa-solid fa-truck-fast mr-2"></i> <?php echo $txt['slide4_sub']; ?>
+                            </span>
                         </div>
-                        <div
-                            class="absolute bottom-0 left-0 w-32 h-32 bg-primary/30 rounded-full blur-[50px] -ml-10 -mb-10">
-                        </div>
-
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-8">
-                                <h3 class="text-xl font-bold text-white flex items-center gap-2">
-                                    <i class="fa-solid fa-satellite-dish text-secondary"></i> Live Tracking
-                                </h3>
-                                <span class="flex h-3 w-3 relative">
-                                    <span
-                                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                                    <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                                </span>
-                            </div>
-
-                            <div class="space-y-4">
-                                <div>
-                                    <label
-                                        class="text-xs text-gray-400 uppercase font-bold tracking-wider ml-1">Tracking
-                                        Number</label>
-                                    <div class="relative mt-1">
-                                        <input type="text" placeholder="Enter ID (e.g. PYT-2024)"
-                                            class="w-full pl-4 pr-12 py-3 bg-black/40 border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-all font-mono">
-                                        <button
-                                            class="absolute right-2 top-1.5 p-1.5 bg-secondary text-white rounded-lg hover:bg-white hover:text-secondary transition-colors">
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="pt-4 border-t border-white/10">
-                                    <div class="flex items-center gap-4">
-                                        <div class="bg-white/10 p-3 rounded-lg text-white">
-                                            <i class="fa-solid fa-headset text-xl"></i>
-                                        </div>
-                                        <div>
-                                            <p class="text-xs text-gray-400">Need Help?</p>
-                                            <p
-                                                class="text-white font-bold hover:text-secondary cursor-pointer transition-colors">
-                                                +1 (555) 123-4567</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <h1
+                            class="text-5xl lg:text-7xl font-heading font-extrabold text-white leading-tight mb-6 drop-shadow-2xl">
+                            <?php echo $txt['slide4_title']; ?>
+                        </h1>
+                        <p
+                            class="text-xl text-gray-200 mb-8 leading-relaxed max-w-xl drop-shadow-lg font-light border-l-4 border-orange-500 pl-6">
+                            <?php echo $txt['slide4_desc']; ?>
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#quote"
+                                class="px-8 py-4 bg-orange-600 text-white font-bold rounded-xl hover:bg-white hover:text-orange-600 transition-all shadow-xl shadow-orange-600/40 hover:-translate-y-1 flex items-center gap-2 group">
+                                <?php echo $txt['slide4_btn']; ?> <i
+                                    class="fa-solid fa-truck group-hover:translate-x-1 transition-transform"></i>
+                            </a>
                         </div>
                     </div>
+
                 </div>
 
             </div>
@@ -450,7 +524,7 @@ $txt = $t[$lang];
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <span class="text-secondary font-bold tracking-wider uppercase text-sm"><?php echo $txt['map_sub']; ?>
                 </span>
-                <h2 class="text-3xl font-heading font-bold text-primary-dark mt-2"><?php echo $txt['map_title']; ?>
+                <h2 class="text-3xl font-heading font-bold text-[#1a5f7a] mt-2"><?php echo $txt['map_title']; ?>
                 </h2>
             </div>
 
@@ -567,7 +641,7 @@ $txt = $t[$lang];
                 <div class="w-full lg:w-1/2">
                     <span
                         class="text-secondary font-bold tracking-wider uppercase text-sm"><?php echo $txt['about_sub']; ?></span>
-                    <h2 class="text-4xl font-heading font-bold text-primary-dark mt-2 mb-6">
+                    <h2 class="text-4xl font-heading font-bold text-[#1a5f7a] mt-2 mb-6">
                         <?php echo $txt['about_title']; ?>
                     </h2>
                     <p class="text-gray-600 text-lg mb-8 leading-relaxed">
@@ -602,13 +676,13 @@ $txt = $t[$lang];
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span
                     class="text-secondary font-bold tracking-wider uppercase text-sm"><?php echo $txt['services_sub']; ?></span>
-                <h2 class="text-4xl font-heading font-bold text-primary-dark mt-2 mb-4">
+                <h2 class="text-4xl font-heading font-bold text-[#1a5f7a] mt-2 mb-4">
                     <?php echo $txt['services_title']; ?>
                 </h2>
                 <p class="text-gray-600 text-lg"><?php echo $txt['services_desc']; ?></p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- S1 -->
                 <div
                     class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group border border-transparent hover:border-primary/20">
@@ -649,6 +723,26 @@ $txt = $t[$lang];
                     <h3 class="text-xl font-bold text-gray-900 mb-3"><?php echo $txt['serv_warehouse_title']; ?></h3>
                     <p class="text-gray-600 mb-4 text-sm"><?php echo $txt['serv_warehouse_desc']; ?></p>
                 </div>
+                <!-- S5 - NEW: Pickup & Delivery -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group border border-transparent hover:border-primary/20">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center text-primary text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3"><?php echo $txt['serv_pickup_title']; ?></h3>
+                    <p class="text-gray-600 mb-4 text-sm"><?php echo $txt['serv_pickup_desc']; ?></p>
+                </div>
+                <!-- S6 - NEW: Cargo Insurance -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-secondary/10 transition-all duration-300 group border border-transparent hover:border-secondary/20">
+                    <div
+                        class="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary text-2xl mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3"><?php echo $txt['serv_insurance_title']; ?></h3>
+                    <p class="text-gray-600 mb-4 text-sm"><?php echo $txt['serv_insurance_desc']; ?></p>
+                </div>
             </div>
         </div>
     </section>
@@ -656,7 +750,7 @@ $txt = $t[$lang];
 
 
     <!-- Request Quote Section -->
-    <section id="quote" class="py-24 bg-primary-dark relative text-white">
+    <section id="quote" class="py-24 bg-[#36b5e8] relative text-white">
         <div class="absolute inset-0 bg-primary opacity-50 mix-blend-multiply"></div>
         <div class="absolute inset-0 bg-[url('assets/images/backgrounds/5.jpg')] bg-cover bg-fixed opacity-20"></div>
 
@@ -716,7 +810,7 @@ $txt = $t[$lang];
     <!-- FAQ (Static as per V2) -->
     <section id="faq" class="py-24 bg-gray-50">
         <div class="max-w-3xl mx-auto px-4">
-            <h2 class="text-3xl font-heading font-bold text-center text-primary-dark mb-12">FAQ</h2>
+            <h2 class="text-3xl font-heading font-bold text-center text-[#1a5f7a] mb-12">FAQ</h2>
             <div class="space-y-4">
                 <details class="group bg-white p-6 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
                     <summary class="flex items-center justify-between cursor-pointer text-lg font-medium text-gray-900">
@@ -763,7 +857,7 @@ $txt = $t[$lang];
     <!-- Footer -->
     <!-- Footer -->
     <!-- Footer -->
-    <footer class="bg-primary-dark pt-16 pb-8 border-t border-primary-dark relative text-white">
+    <footer class="bg-[#36b5e8] pt-16 pb-8 border-t border-[#36b5e8] relative text-white">
         <!-- Background Layers matching Quote Section -->
         <div class="absolute inset-0 bg-primary opacity-50 mix-blend-multiply"></div>
         <div class="absolute inset-0 bg-[url('assets/images/backgrounds/5.jpg')] bg-cover bg-fixed opacity-20"></div>
@@ -811,7 +905,7 @@ $txt = $t[$lang];
                     </ul>
                 </div>
             </div>
-            <div class="text-center pt-8 border-t border-primary-dark text-gray-400">
+            <div class="text-center pt-8 border-t border-[#36b5e8] text-gray-400">
                 <p>
                     <?php echo $txt['copyright']; ?>
                 </p>
@@ -821,7 +915,7 @@ $txt = $t[$lang];
 
     <!-- WIDGETS -->
 
-    <!-- Announcement Popup -->
+    <!-- Announcement Popup
     <div id="announcementPopup"
         class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm opacity-0 invisible transition-all duration-300">
         <div class="bg-white w-[90%] max-w-lg rounded-2xl shadow-2xl transform translate-y-4 scale-95 transition-all duration-300 overflow-hidden"
@@ -844,7 +938,7 @@ $txt = $t[$lang];
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Accessibility Side Tab -->
     <button onclick="toggleAccMenu()"
@@ -918,7 +1012,7 @@ $txt = $t[$lang];
 
         // Hero Slider Logic
         let currentSlide = 1;
-        const totalSlides = 3;
+        const totalSlides = 4;
         let slideInterval;
 
         function showSlide(n) {

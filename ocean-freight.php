@@ -1,7 +1,7 @@
 <?php
 // Language Logic
 $lang = $_GET['lang'] ?? 'en';
-if (!in_array($lang, ['en', 'pt']))
+if (!in_array($lang, ['en', 'pt', 'es']))
     $lang = 'en';
 
 $t = [
@@ -120,6 +120,64 @@ $t = [
         'cta_title' => 'Escale Seu Comércio Global',
         'cta_desc' => 'Obtenha uma cotação competitiva de frete marítimo hoje.',
         'copyright' => '© 2024 Python Logistics. Todos os direitos reservados.'
+    ],
+    'es' => [
+        // Navigation
+        'nav_home' => 'Inicio',
+        'nav_about' => 'Acerca de',
+        'nav_services' => 'Servicios',
+        'nav_quote' => 'Cotización',
+        'btn_quote' => 'Solicitar Cotización',
+        'serv_air_title' => 'Flete Aéreo',
+        'serv_ocean_title' => 'Flete Marítimo',
+        'serv_road_title' => 'Transporte Terrestre',
+        'serv_warehouse_title' => 'Almacenamiento',
+
+        // Hero
+        'hero_title' => 'Flete Marítimo Global',
+        'hero_desc' => 'Soluciones de transporte marítimo rentables y confiables. Conectamos continentes con servicios personalizados de Carga Completa de Contenedor (FCL) y Carga Fraccionada (LCL).',
+        'hero_stat1' => 'Puertos Principales',
+        'hero_stat2' => 'Rastreo de Buques',
+
+        // Advantages
+        'adv_title' => '¿Por Qué Elegir Flete Marítimo?',
+        'adv_1_title' => 'Eficiencia de Costos',
+        'adv_1_desc' => 'La solución más económica para grandes volúmenes y envíos de larga distancia, reduciendo significativamente sus costos de cadena de suministro.',
+        'adv_2_title' => 'Capacidad Masiva',
+        'adv_2_desc' => 'Desde un solo palet hasta maquinaria pesada, los buques manejan prácticamente cualquier tamaño o peso de carga.',
+        'adv_3_title' => 'Eco-Amigable',
+        'adv_3_desc' => 'El transporte marítimo tiene una huella de carbono menor por tonelada-milla en comparación con el transporte aéreo o terrestre.',
+
+        // Types of Cargo
+        'types_title' => 'Soluciones Marítimas Especializadas',
+        'types_desc' => 'Opciones integrales de flete marítimo adaptadas a los requisitos específicos de su carga.',
+        'type_1_title' => 'Transporte FCL',
+        'type_1_desc' => 'Carga Completa de Contenedor para uso exclusivo, ofreciendo máxima seguridad y tránsito más rápido.',
+        'type_2_title' => 'Transporte LCL',
+        'type_2_desc' => 'Carga Fraccionada para envíos más pequeños, pagando solo por el espacio que utiliza.',
+        'type_3_title' => 'Contenedores Reefer',
+        'type_3_desc' => 'Unidades con temperatura controlada para mantener productos perecederos frescos a través del océano.',
+        'type_4_title' => 'Carga de Proyecto',
+        'type_4_desc' => 'Servicios de carga pesada y breakbulk para equipos industriales sobredimensionados.',
+
+        // Process
+        'process_title' => 'Proceso de Envío Marítimo',
+        'step1' => 'Reserva y Recogida',
+        'step2' => 'Carga de Contenedor',
+        'step3' => 'Manejo Portuario',
+        'step4' => 'Tránsito Oceánico',
+        'step5' => 'Despacho y Entrega',
+
+        // FAQ
+        'faq_title' => 'Preguntas Frecuentes sobre Flete Marítimo',
+        'q1' => '¿Cuál es la diferencia entre FCL y LCL?',
+        'a1' => 'FCL (Carga Completa de Contenedor) significa que alquila el contenedor completo. LCL (Carga Fraccionada) significa que comparte el espacio del contenedor con otros exportadores, ideal para volúmenes menores.',
+        'q2' => '¿Cuánto tiempo toma el flete marítimo?',
+        'a2' => 'Los tiempos de tránsito varían según la ruta, generalmente oscilan entre 15 y 45 días. Proporcionamos tiempos de llegada estimados para todos los principales puertos globales.',
+
+        'cta_title' => 'Escale Su Comercio Global',
+        'cta_desc' => 'Obtenga una cotización competitiva de flete marítimo hoy.',
+        'copyright' => '© 2024 Python Logistics. Todos los derechos reservados.'
     ]
 ];
 $txt = $t[$lang];
@@ -169,13 +227,13 @@ $txt = $t[$lang];
     <?php include 'includes/navbar.php'; ?>
 
     <!-- IMMERSIVE HERO -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-primary-dark">
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#36b5e8]">
         <div class="absolute inset-0 z-0">
             <!-- Ocean Background -->
             <div
                 class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1543788289-5431688d052a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-30 mix-blend-overlay">
             </div>
-            <div class="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary to-transparent opacity-90">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#36b5e8] via-primary to-transparent opacity-90">
             </div>
         </div>
 
@@ -230,7 +288,7 @@ $txt = $t[$lang];
     <section class="py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-4xl font-heading font-bold text-primary-dark mb-4"><?php echo $txt['types_title']; ?>
+                <h2 class="text-4xl font-heading font-bold text-[#1a5f7a] mb-4"><?php echo $txt['types_title']; ?>
                 </h2>
                 <p class="text-lg text-gray-600"><?php echo $txt['types_desc']; ?></p>
             </div>
@@ -296,7 +354,7 @@ $txt = $t[$lang];
                 <div>
                     <span
                         class="text-secondary font-bold tracking-wider uppercase text-sm"><?php echo $txt['adv_title']; ?></span>
-                    <h2 class="text-3xl font-heading font-bold text-primary-dark mt-2 mb-6">
+                    <h2 class="text-3xl font-heading font-bold text-[#1a5f7a] mt-2 mb-6">
                         <?php echo $txt['adv_1_title']; ?> & <?php echo $txt['adv_2_title']; ?>
                     </h2>
                     <div class="prose text-gray-600 leading-relaxed space-y-6">
@@ -316,7 +374,7 @@ $txt = $t[$lang];
 
                 <!-- Right: FAQ Accordion -->
                 <div>
-                    <h3 class="text-2xl font-bold text-primary-dark mb-8"><?php echo $txt['faq_title']; ?></h3>
+                    <h3 class="text-2xl font-bold text-[#1a5f7a] mb-8"><?php echo $txt['faq_title']; ?></h3>
                     <div class="space-y-4">
                         <details
                             class="group bg-white p-6 rounded-xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden open:border-secondary/50">

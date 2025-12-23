@@ -13,7 +13,7 @@ $home_link = $is_home ? '#' : 'index.php';
                 <a href="<?php echo $home_link; ?>" class="flex-shrink-0 flex items-center gap-2 group">
                     <img src="https://pythonlogistics.com/wp-content/uploads/2020/10/logo-python.png"
                         alt="Python Logistics"
-                        class="h-10 w-auto group-hover:scale-105 transition-transform duration-300">
+                        class="h-14 w-auto group-hover:scale-105 transition-transform duration-300">
                 </a>
 
                 <!-- Desktop Menu -->
@@ -83,6 +83,11 @@ $home_link = $is_home ? '#' : 'index.php';
                         <a href="?lang=en"
                             class="opacity-50 hover:opacity-100 transition-opacity <?php echo $lang == 'en' ? '!opacity-100 scale-110' : ''; ?>">
                             <img src="https://flagcdn.com/w20/us.png" alt="EN" class="rounded-sm shadow-sm">
+                        </a>
+                        <span class="text-gray-300">|</span>
+                        <a href="?lang=es"
+                            class="opacity-50 hover:opacity-100 transition-opacity <?php echo $lang == 'es' ? '!opacity-100 scale-110' : ''; ?>">
+                            <img src="https://flagcdn.com/w20/es.png" alt="ES" class="rounded-sm shadow-sm">
                         </a>
                         <span class="text-gray-300">|</span>
                         <a href="?lang=pt"
@@ -188,6 +193,10 @@ $home_link = $is_home ? '#' : 'index.php';
                 <a href="?lang=en" class="mobile-lang-btn <?php echo $lang == 'en' ? 'active' : ''; ?>">
                     <img src="https://flagcdn.com/w20/us.png" alt="EN">
                     <span>English</span>
+                </a>
+                <a href="?lang=es" class="mobile-lang-btn <?php echo $lang == 'es' ? 'active' : ''; ?>">
+                    <img src="https://flagcdn.com/w20/es.png" alt="ES">
+                    <span>Español</span>
                 </a>
                 <a href="?lang=pt" class="mobile-lang-btn <?php echo $lang == 'pt' ? 'active' : ''; ?>">
                     <img src="https://flagcdn.com/w20/br.png" alt="PT">

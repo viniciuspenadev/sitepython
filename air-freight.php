@@ -1,7 +1,7 @@
 <?php
 // Language Logic (Same as index_v3.php)
 $lang = $_GET['lang'] ?? 'en';
-if (!in_array($lang, ['en', 'pt']))
+if (!in_array($lang, ['en', 'pt', 'es']))
     $lang = 'en';
 
 $t = [
@@ -120,6 +120,64 @@ $t = [
         'cta_title' => 'Acelere Sua Cadeia de Suprimentos',
         'cta_desc' => 'Obtenha uma cotação personalizada de frete aéreo hoje.',
         'copyright' => '© 2024 Python Logistics. Todos os direitos reservados.'
+    ],
+    'es' => [
+        // Navigation (Reused)
+        'nav_home' => 'Inicio',
+        'nav_about' => 'Acerca de',
+        'nav_services' => 'Servicios',
+        'nav_quote' => 'Cotización',
+        'btn_quote' => 'Solicitar Cotización',
+        'serv_air_title' => 'Flete Aéreo',
+        'serv_ocean_title' => 'Flete Marítimo',
+        'serv_road_title' => 'Transporte Terrestre',
+        'serv_warehouse_title' => 'Almacenamiento',
+
+        // Hero
+        'hero_title' => 'Logística de Flete Aéreo Global',
+        'hero_desc' => 'Soluciones de carga aérea rápidas, seguras y confiables para envíos críticos en todo el mundo. Conectamos su negocio con los principales mercados del mundo con velocidad y precisión.',
+        'hero_stat1' => 'Alcance Global',
+        'hero_stat2' => 'Soporte 24/7',
+
+        // Advantages
+        'adv_title' => 'Ventajas del Flete Aéreo',
+        'adv_1_title' => 'Velocidad Inigualable',
+        'adv_1_desc' => 'El método de envío más rápido para carga urgente, garantizando que sus productos lleguen en horas, no semanas.',
+        'adv_2_title' => 'Conectividad Global',
+        'adv_2_desc' => 'Acceso directo a cualquier aeropuerto importante del mundo, facilitando el comercio internacional para empresas de todos los tamaños.',
+        'adv_3_title' => 'Seguridad Mejorada',
+        'adv_3_desc' => 'Los estrictos controles de seguridad aeroportuaria y el tiempo de tránsito reducido disminuyen significativamente el riesgo de robo y daño.',
+
+        // Types of Cargo
+        'types_title' => 'Soluciones Especializadas de Carga Aérea',
+        'types_desc' => 'Manejamos diversos tipos de carga con protocolos específicos garantizando cumplimiento y seguridad.',
+        'type_1_title' => 'Carga General',
+        'type_1_desc' => 'Electrónicos, textiles, piezas de maquinaria y bienes de consumo manejados con cuidado.',
+        'type_2_title' => 'Productos Perecederos',
+        'type_2_desc' => 'Soluciones con temperatura controlada para alimentos, flores y productos farmacéuticos.',
+        'type_3_title' => 'Materiales Peligrosos',
+        'type_3_desc' => 'Manejo certificado IATA para mercancías peligrosas y productos químicos.',
+        'type_4_title' => 'Carga Sobredimensionada',
+        'type_4_desc' => 'Opciones de fletamento para maquinaria pesada y envíos fuera de medida.',
+
+        // Process
+        'process_title' => 'Nuestro Proceso de Flete Aéreo',
+        'step1' => 'Consulta',
+        'step2' => 'Recogida y Transporte',
+        'step3' => 'Despacho Aduanero',
+        'step4' => 'Tránsito Aéreo',
+        'step5' => 'Entrega Final',
+
+        // FAQ
+        'faq_title' => 'Preguntas sobre Flete Aéreo',
+        'q1' => '¿Cómo se calcula el costo del flete aéreo?',
+        'a1' => 'El flete aéreo se calcula en base al mayor valor entre el peso real o el peso volumétrico (Peso Facturable). Nuestros expertos lo optimizan para usted.',
+        'q2' => '¿Qué documentos necesito?',
+        'a2' => 'Típicamente, se requiere una Factura Comercial, Lista de Empaque y Guía Aérea (AWB). Nosotros manejamos la documentación para usted.',
+
+        'cta_title' => 'Acelere Su Cadena de Suministro',
+        'cta_desc' => 'Obtenga una cotización personalizada de flete aéreo hoy.',
+        'copyright' => '© 2024 Python Logistics. Todos los derechos reservados.'
     ]
 ];
 $txt = $t[$lang];
@@ -169,12 +227,12 @@ $txt = $t[$lang];
     <?php include 'includes/navbar.php'; ?>
 
     <!-- IMMERSIVE HERO -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-primary-dark">
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#36b5e8]">
         <div class="absolute inset-0 z-0">
             <div
                 class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-30 mix-blend-overlay">
             </div>
-            <div class="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary to-transparent opacity-90">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#36b5e8] via-primary to-transparent opacity-90">
             </div>
         </div>
 
@@ -226,7 +284,7 @@ $txt = $t[$lang];
     <section class="py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-4xl font-heading font-bold text-primary-dark mb-4"><?php echo $txt['types_title']; ?>
+                <h2 class="text-4xl font-heading font-bold text-[#1a5f7a] mb-4"><?php echo $txt['types_title']; ?>
                 </h2>
                 <p class="text-lg text-gray-600"><?php echo $txt['types_desc']; ?></p>
             </div>
@@ -292,7 +350,7 @@ $txt = $t[$lang];
                 <div>
                     <span
                         class="text-secondary font-bold tracking-wider uppercase text-sm"><?php echo $txt['adv_title']; ?></span>
-                    <h2 class="text-3xl font-heading font-bold text-primary-dark mt-2 mb-6">
+                    <h2 class="text-3xl font-heading font-bold text-[#1a5f7a] mt-2 mb-6">
                         <?php echo $txt['adv_1_title']; ?> & <?php echo $txt['adv_2_title']; ?>
                     </h2>
                     <div class="prose text-gray-600 leading-relaxed space-y-6">
@@ -312,7 +370,7 @@ $txt = $t[$lang];
 
                 <!-- Right: FAQ Accordion -->
                 <div>
-                    <h3 class="text-2xl font-bold text-primary-dark mb-8"><?php echo $txt['faq_title']; ?></h3>
+                    <h3 class="text-2xl font-bold text-[#1a5f7a] mb-8"><?php echo $txt['faq_title']; ?></h3>
                     <div class="space-y-4">
                         <details
                             class="group bg-white p-6 rounded-xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden open:border-secondary/50">
