@@ -1,7 +1,61 @@
 <?php
+// Fallback translations for navbar if not defined in page (prevents Undefined array key errors)
+if (!isset($txt['serv_insurance_title']) || !isset($txt['nav_home'])) {
+    $navbar_translations = [
+        'en' => [
+            'nav_home' => 'Home',
+            'nav_about' => 'About Us',
+            'nav_services' => 'Services',
+            'nav_quote' => 'Request Quote',
+            'nav_news' => 'News',
+            'nav_contact' => 'Contact',
+            'serv_air_title' => 'Air Freight',
+            'serv_ocean_title' => 'Ocean Freight',
+            'serv_road_title' => 'Road Transport',
+            'serv_warehouse_title' => 'Warehousing',
+            'serv_pickup_title' => 'Pickup & Delivery',
+            'serv_insurance_title' => 'Cargo Insurance',
+        ],
+        'pt' => [
+            'nav_home' => 'Início',
+            'nav_about' => 'Sobre Nós',
+            'nav_services' => 'Serviços',
+            'nav_quote' => 'Cotação',
+            'nav_news' => 'Notícias',
+            'nav_contact' => 'Contato',
+            'serv_air_title' => 'Frete Aéreo',
+            'serv_ocean_title' => 'Frete Marítimo',
+            'serv_road_title' => 'Transporte Rodoviário',
+            'serv_warehouse_title' => 'Armazenagem',
+            'serv_pickup_title' => 'Coleta & Entrega',
+            'serv_insurance_title' => 'Seguro de Carga',
+        ],
+        'es' => [
+            'nav_home' => 'Inicio',
+            'nav_about' => 'Acerca de',
+            'nav_services' => 'Servicios',
+            'nav_quote' => 'Cotización',
+            'nav_news' => 'Noticias',
+            'nav_contact' => 'Contacto',
+            'serv_air_title' => 'Flete Aéreo',
+            'serv_ocean_title' => 'Flete Marítimo',
+            'serv_road_title' => 'Transporte Terrestre',
+            'serv_warehouse_title' => 'Almacenamiento',
+            'serv_pickup_title' => 'Recogida y Entrega',
+            'serv_insurance_title' => 'Seguro de Carga',
+        ]
+    ];
+    $current_lang = $lang ?? 'en';
+    if (!isset($navbar_translations[$current_lang]))
+        $current_lang = 'en';
+    // Merge fallback translations into main $txt array
+    $txt = array_merge($txt ?? [], $navbar_translations[$current_lang]);
+}
+
 $current_page = basename($_SERVER['PHP_SELF']);
 $is_home = ($current_page == 'index.php');
-$home_link = $is_home ? '#' : 'index.php';
+$is_about = ($current_page == 'about.php');
+$home_link = $is_home ? '#' : './';
 ?>
 <!-- Navigation (Centralized) -->
 <nav class="fixed top-0 w-full z-50 transition-all duration-300 pt-4 px-4" id="navbar">
@@ -49,7 +103,7 @@ $home_link = $is_home ? '#' : 'index.php';
                                     </div>
                                     <?php echo $txt['serv_ocean_title']; ?>
                                 </a>
-                                <a href="<?php echo $is_home ? '#road' : 'index#road'; ?>"
+                                <a href="road-transport?lang=<?php echo $lang; ?>"
                                     class="block px-4 py-3 rounded-xl hover:bg-secondary/10 hover:text-secondary transition-colors text-sm font-medium flex items-center gap-3">
                                     <div
                                         class="w-8 h-8 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
@@ -57,7 +111,7 @@ $home_link = $is_home ? '#' : 'index.php';
                                     </div>
                                     <?php echo $txt['serv_road_title']; ?>
                                 </a>
-                                <a href="<?php echo $is_home ? '#warehousing' : 'index#warehousing'; ?>"
+                                <a href="warehousing?lang=<?php echo $lang; ?>"
                                     class="block px-4 py-3 rounded-xl hover:bg-secondary/10 hover:text-secondary transition-colors text-sm font-medium flex items-center gap-3">
                                     <div
                                         class="w-8 h-8 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
@@ -65,13 +119,21 @@ $home_link = $is_home ? '#' : 'index.php';
                                     </div>
                                     <?php echo $txt['serv_warehouse_title']; ?>
                                 </a>
+                                <a href="cargo-insurance?lang=<?php echo $lang; ?>"
+                                    class="block px-4 py-3 rounded-xl hover:bg-secondary/10 hover:text-secondary transition-colors text-sm font-medium flex items-center gap-3">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
+                                        <i class="fa-solid fa-shield-halved"></i>
+                                    </div>
+                                    <?php echo $txt['serv_insurance_title']; ?>
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <a href="<?php echo $is_home ? '#about' : 'index#about'; ?>"
-                        class="px-5 py-2 text-sm font-semibold text-gray-700 rounded-full hover:bg-white hover:text-primary hover:shadow-sm transition-all duration-300"><?php echo $txt['nav_about']; ?></a>
-                    <a href="<?php echo $is_home ? '#quote' : 'index#quote'; ?>"
+                    <a href="about?lang=<?php echo $lang; ?>"
+                        class="px-5 py-2 text-sm font-semibold rounded-full hover:bg-white hover:text-primary hover:shadow-sm transition-all duration-300 <?php echo $is_about ? 'bg-white text-primary shadow-sm' : 'text-gray-700'; ?>"><?php echo $txt['nav_about']; ?></a>
+                    <a href="<?php echo $is_home ? '#quote' : './#quote'; ?>"
                         class="px-5 py-2 text-sm font-semibold text-gray-700 rounded-full hover:bg-white hover:text-primary hover:shadow-sm transition-all duration-300"><?php echo $txt['nav_quote']; ?></a>
                 </div>
 
@@ -96,7 +158,7 @@ $home_link = $is_home ? '#' : 'index.php';
                         </a>
                     </div>
 
-                    <a href="<?php echo $is_home ? '#quote' : 'index#quote'; ?>"
+                    <a href="<?php echo $is_home ? '#quote' : './#quote'; ?>"
                         class="px-6 py-2.5 bg-secondary text-white font-bold rounded-xl hover:bg-primary transition-all duration-300 shadow-lg shadow-secondary/20 transform hover:-translate-y-0.5 flex items-center gap-2">
                         <?php echo $txt['btn_quote']; ?> <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
@@ -157,29 +219,34 @@ $home_link = $is_home ? '#' : 'index.php';
                         </div>
                         <span><?php echo $txt['serv_ocean_title']; ?></span>
                     </a>
-                    <a href="<?php echo $is_home ? '#road' : 'index#road'; ?>" class="mobile-submenu-link">
+                    <a href="road-transport?lang=<?php echo $lang; ?>" class="mobile-submenu-link">
                         <div class="w-10 h-10 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
                             <i class="fa-solid fa-truck-fast"></i>
                         </div>
                         <span><?php echo $txt['serv_road_title']; ?></span>
                     </a>
-                    <a href="<?php echo $is_home ? '#warehousing' : 'index#warehousing'; ?>"
-                        class="mobile-submenu-link">
+                    <a href="warehousing?lang=<?php echo $lang; ?>" class="mobile-submenu-link">
                         <div class="w-10 h-10 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
                             <i class="fa-solid fa-warehouse"></i>
                         </div>
                         <span><?php echo $txt['serv_warehouse_title']; ?></span>
                     </a>
+                    <a href="cargo-insurance?lang=<?php echo $lang; ?>" class="mobile-submenu-link">
+                        <div class="w-10 h-10 rounded-full bg-blue-50 text-secondary flex items-center justify-center">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <span><?php echo $txt['serv_insurance_title']; ?></span>
+                    </a>
                 </div>
             </div>
 
-            <a href="<?php echo $is_home ? '#about' : 'index#about'; ?>" class="mobile-menu-link">
+            <a href="about?lang=<?php echo $lang; ?>" class="mobile-menu-link">
                 <i class="fa-solid fa-info-circle"></i>
                 <span><?php echo $txt['nav_about']; ?></span>
                 <i class="fa-solid fa-chevron-right text-xs opacity-30"></i>
             </a>
 
-            <a href="<?php echo $is_home ? '#quote' : 'index#quote'; ?>" class="mobile-menu-link">
+            <a href="<?php echo $is_home ? '#quote' : './#quote'; ?>" class="mobile-menu-link">
                 <i class="fa-solid fa-calculator"></i>
                 <span><?php echo $txt['nav_quote']; ?></span>
                 <i class="fa-solid fa-chevron-right text-xs opacity-30"></i>
@@ -205,7 +272,7 @@ $home_link = $is_home ? '#' : 'index.php';
             </div>
 
             <!-- CTA Button -->
-            <a href="<?php echo $is_home ? '#quote' : 'index#quote'; ?>" class="mobile-cta-btn">
+            <a href="<?php echo $is_home ? '#quote' : './#quote'; ?>" class="mobile-cta-btn">
                 <?php echo $txt['btn_quote']; ?> <i class="fa-solid fa-arrow-right"></i>
             </a>
         </div>

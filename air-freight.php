@@ -227,12 +227,14 @@ $txt = $t[$lang];
     <?php include 'includes/navbar.php'; ?>
 
     <!-- IMMERSIVE HERO -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#36b5e8]">
+    <!-- IMMERSIVE HERO -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#2b2b2b]">
         <div class="absolute inset-0 z-0">
+            <!-- Air Background -->
             <div
-                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-30 mix-blend-overlay">
+                class="absolute inset-0 bg-[url('assets/images/sliders/freteaereo-delphifretes.jpg')] bg-cover bg-center opacity-40 mix-blend-overlay">
             </div>
-            <div class="absolute inset-0 bg-gradient-to-br from-[#36b5e8] via-primary to-transparent opacity-90">
+            <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent opacity-95">
             </div>
         </div>
 
@@ -268,16 +270,15 @@ $txt = $t[$lang];
                     </div>
                 </div>
 
-                <!-- 3D Plane Visual -->
-                <div class="relative hidden lg:block h-[400px]">
-                    <img src="https://pngimg.com/d/plane_PNG101235.png" alt="Cargo Plane"
-                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl drop-shadow-2xl animate-float z-20 object-contain ml-12 filter brightness-110">
-                    <div
-                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-3xl z-10">
-                    </div>
-                </div>
             </div>
+
+            <!-- Visual (Removed Floating Plane as requested) -->
+            <!-- Image removed for cleaner background-focused hero -->
         </div>
+        </div>
+    </section>
+    </div>
+    </div>
     </section>
 
     <!-- DETAILED SERVICES GRID (SEO) -->
@@ -456,10 +457,8 @@ $txt = $t[$lang];
         </div>
     </section>
 
-    <!-- Footer (Same as index) -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-400 border-t border-gray-800 mt-auto">
-        <p><?php echo $txt['copyright']; ?></p>
-    </footer>
+    <!-- Footer -->
+    <?php include 'includes/footer.php'; ?>
 
     <script>
         const navContainer = document.getElementById('nav-container');

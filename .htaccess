@@ -4,7 +4,7 @@ DirectoryIndex index.php
 # Habilitar rewrite
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /
+    # RewriteBase /
     
     # Forçar HTTPS (compatível com proxy reverso)
     # RewriteCond %{HTTP:X-Forwarded-Proto} !https

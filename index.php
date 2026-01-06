@@ -31,7 +31,7 @@ $t = [
         'slide4_btn' => 'Request Pickup',
         'trusted_title' => 'Trusted by Industry Leaders Worldwide',
         'years_exp' => 'Years Experience',
-        'deliv_parcels' => 'Delivered Parcels',
+        'deliv_parcels' => 'Air and Ocean Shipments',
         'global_partners' => 'Global Partners',
         'satisfaction' => 'Satisfaction',
         'about_sub' => 'Who We Are',
@@ -83,7 +83,7 @@ $t = [
         'footer_desc' => 'Python Logistics is committed to providing efficient, reliable, and secure logistics solutions globally.',
         'quick_links' => 'Quick Links',
         'contact_us' => 'Contact Us',
-        'copyright' => '© 2024 Python Logistics. All rights reserved.',
+        'copyright' => '© 2026 Python Logistics. All rights reserved.',
         'map_sub' => 'Global Presence',
         'map_title' => 'Connecting the World',
         'loc_headquarters' => 'Headquarters',
@@ -118,7 +118,7 @@ $t = [
         'slide4_btn' => 'Solicitar Coleta',
         'trusted_title' => 'Confiado por Líderes da Indústria Mundialmente',
         'years_exp' => 'Anos de Experiência',
-        'deliv_parcels' => 'Pacotes Entregues',
+        'deliv_parcels' => 'Embarques Aéreos e Marítimos',
         'global_partners' => 'Parceiros Globais',
         'satisfaction' => 'Satisfação',
         'about_sub' => 'Quem Somos',
@@ -170,7 +170,7 @@ $t = [
         'footer_desc' => 'A Python Logistics está comprometida em fornecer soluções logísticas eficientes, confiáveis e seguras globalmente.',
         'quick_links' => 'Links Rápidos',
         'contact_us' => 'Fale Conosco',
-        'copyright' => '© 2024 Python Logistics. Todos os direitos reservados.',
+        'copyright' => '© 2026 Python Logistics. Todos os direitos reservados.',
         'map_sub' => 'Presença Global',
         'map_title' => 'Conectando o Mundo',
         'loc_headquarters' => 'Sede',
@@ -205,7 +205,7 @@ $t = [
         'slide4_btn' => 'Solicitar Recogida',
         'trusted_title' => 'Confiado por Líderes de la Industria a Nivel Mundial',
         'years_exp' => 'Años de Experiencia',
-        'deliv_parcels' => 'Paquetes Entregados',
+        'deliv_parcels' => 'Envíos Aéreos y Marítimos',
         'global_partners' => 'Socios Globales',
         'satisfaction' => 'Satisfacción',
         'about_sub' => 'Quiénes Somos',
@@ -257,7 +257,7 @@ $t = [
         'footer_desc' => 'Python Logistics está comprometida en proporcionar soluciones logísticas eficientes, confiables y seguras a nivel global.',
         'quick_links' => 'Enlaces Rápidos',
         'contact_us' => 'Contáctenos',
-        'copyright' => '© 2024 Python Logistics. Todos los derechos reservados.',
+        'copyright' => '© 2026 Python Logistics. Todos los derechos reservados.',
         'map_sub' => 'Presencia Global',
         'map_title' => 'Conectando el Mundo',
         'loc_headquarters' => 'Sede Central',
@@ -346,8 +346,7 @@ $txt = $t[$lang];
         <div class="absolute inset-0 z-0">
             <!-- Slide 1 BG -->
             <div class="hero-bg absolute inset-0 bg-cover bg-center transition-all duration-[2000ms] ease-in-out opacity-100 scale-105"
-                style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"
-                id="bg-1"></div>
+                style="background-image: url('assets/images/sliders/warehouse.jpg');" id="bg-1"></div>
             <!-- Slide 2 BG -->
             <div class="hero-bg absolute inset-0 bg-cover bg-center transition-all duration-[2000ms] ease-in-out opacity-0 scale-100"
                 style="background-image: url('https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"
@@ -497,22 +496,18 @@ $txt = $t[$lang];
             <h5 class="text-center text-gray-400 font-bold uppercase tracking-widest text-sm mb-8">
                 <?php echo $txt['trusted_title']; ?>
             </h5>
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-8 text-center">
                 <div>
-                    <h3 class="text-3xl font-bold text-primary">10+</h3>
+                    <h3 class="text-5xl font-bold text-primary">15+</h3>
                     <p class="text-sm text-gray-500 font-medium"><?php echo $txt['years_exp']; ?></p>
                 </div>
                 <div>
-                    <h3 class="text-3xl font-bold text-secondary">25k+</h3>
+                    <h3 class="text-5xl font-bold text-secondary">25k+</h3>
                     <p class="text-sm text-gray-500 font-medium"><?php echo $txt['deliv_parcels']; ?></p>
                 </div>
                 <div>
-                    <h3 class="text-3xl font-bold text-primary">300+</h3>
+                    <h3 class="text-5xl font-bold text-primary">300+</h3>
                     <p class="text-sm text-gray-500 font-medium"><?php echo $txt['global_partners']; ?></p>
-                </div>
-                <div>
-                    <h3 class="text-3xl font-bold text-secondary">100%</h3>
-                    <p class="text-sm text-gray-500 font-medium"><?php echo $txt['satisfaction']; ?></p>
                 </div>
             </div>
         </div>
@@ -531,17 +526,107 @@ $txt = $t[$lang];
             <div class="relative w-full max-w-5xl mx-auto">
                 <img src="assets/images/mapa mundi aberto.svg" alt="World Map" class="w-full h-auto opacity-80">
 
-                <!-- Pulsing Pin 1: Miami (Headquarters) - Badge sempre visível -->
+                <!-- Network Lines SVG Overlay -->
+                <svg class="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 100 100"
+                    preserveAspectRatio="none">
+                    <defs>
+                        <!-- Gradient for the lines to fade out at ends -->
+                        <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#2bace2;stop-opacity:0" />
+                            <stop offset="50%" style="stop-color:#2bace2;stop-opacity:0.8" />
+                            <stop offset="100%" style="stop-color:#2bace2;stop-opacity:0" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="0.5" result="coloredBlur" />
+                            <feMerge>
+                                <feMergeNode in="coloredBlur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <!-- Styles for the animated lines -->
+                    <style>
+                        .connection-line {
+                            fill: none;
+                            stroke: url(#lineGradient);
+                            stroke-width: 0.3;
+                            stroke-linecap: round;
+                            stroke-dasharray: 4 6;
+                            animation: flow 3s linear infinite;
+                            filter: url(#glow);
+                            opacity: 0.9;
+                        }
+
+                        .connection-line-fast {
+                            fill: none;
+                            stroke: #3e4197;
+                            stroke-width: 0.4;
+                            stroke-dasharray: 3 3;
+                            animation: flow 4s linear infinite reverse;
+                            opacity: 0.6;
+                        }
+
+                        @keyframes flow {
+                            from {
+                                stroke-dashoffset: 20;
+                            }
+
+                            to {
+                                stroke-dashoffset: 0;
+                            }
+                        }
+                    </style>
+
+                    <!-- Miami (24, 48) to Hamburg (51, 28) -->
+                    <path d="M 24 48 Q 38 20 51 28" class="connection-line" />
+
+                    <!-- Miami (24, 48) to Sao Paulo (32, 75) -->
+                    <path d="M 24 48 Q 22 65 32 75" class="connection-line" style="animation-duration: 2.5s;" />
+
+                    <!-- Miami (24, 48) to Dubai (62, 42) -->
+                    <path d="M 24 48 Q 45 25 62 42" class="connection-line" style="animation-duration: 3.5s;" />
+
+                    <!-- Miami (24, 48) to Shanghai (80, 38) -->
+                    <path d="M 24 48 Q 50 10 80 38" class="connection-line" style="animation-duration: 4s;" />
+
+                    <!-- Miami (24, 48) to Los Angeles (15, 40) -->
+                    <path d="M 24 48 Q 18 48 15 40" class="connection-line-fast" />
+
+                    <!-- Miami (24, 48) to New York (26, 41) -->
+                    <path d="M 24 48 Q 24 44 26 41" class="connection-line-fast" />
+
+                    <!-- Miami (24, 48) to Rotterdam (49, 30) -->
+                    <path d="M 24 48 Q 36 29 49 30" class="connection-line" />
+
+                    <!-- Miami (24, 48) to Singapore (76, 58) -->
+                    <path d="M 24 48 Q 50 20 76 58" class="connection-line" style="animation-duration: 4.5s;" />
+
+                    <!-- Miami (24, 48) to Panama (23, 58) -->
+                    <path d="M 24 48 Q 20 53 23 58" class="connection-line-fast" />
+
+                    <!-- Miami (24, 48) to Honduras (21, 54) -->
+                    <path d="M 24 48 Q 21 51 21 54" class="connection-line-fast" />
+
+                    <!-- Miami (24, 48) to Chile (27, 82) -->
+                    <path d="M 24 48 Q 20 65 27 82" class="connection-line" style="animation-duration: 3s;" />
+
+                    <!-- Miami (24, 48) to Argentina (30, 85) -->
+                    <path d="M 24 48 Q 28 65 30 85" class="connection-line" style="animation-duration: 3.2s;" />
+                </svg>
+
+                <!-- ================= USA REGION (Darker & Larger Blue) ================= -->
+
+                <!-- Miami (Headquarters) -->
                 <div
                     class="absolute top-[48%] left-[24%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
                     <span class="absolute inline-flex h-8 w-8 rounded-full bg-secondary opacity-50 animate-ping"></span>
                     <span
                         class="relative inline-flex rounded-full h-4 w-4 bg-primary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
                     <div
-                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-primary border border-primary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex flex-col items-center">
+                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-primary border border-primary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
                         <span
-                            class="uppercase tracking-wider text-[10px] text-gray-400"><?php echo $txt['loc_headquarters']; ?>
-                        </span>
+                            class="uppercase tracking-wider text-[10px] text-gray-400"><?php echo $txt['loc_headquarters']; ?></span>
                         <span class="text-sm">Miami, USA</span>
                         <div
                             class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white">
@@ -549,15 +634,32 @@ $txt = $t[$lang];
                     </div>
                 </div>
 
-                <!-- Pin 1b: Los Angeles - Badge apenas no hover -->
+                <!-- New York -->
+                <div
+                    class="absolute top-[41%] left-[26%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
+                    <span
+                        class="absolute inline-flex h-8 w-8 rounded-full bg-secondary opacity-50 animate-ping delay-100"></span>
+                    <span
+                        class="relative inline-flex rounded-full h-4 w-4 bg-primary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
+                    <div
+                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-primary border border-primary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+                        <span class="uppercase tracking-wider text-[10px] text-gray-400">East Coast</span>
+                        <span class="text-sm">New York, USA</span>
+                        <div
+                            class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Los Angeles -->
                 <div
                     class="absolute top-[40%] left-[15%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
                     <span
-                        class="absolute inline-flex h-6 w-6 rounded-full bg-secondary opacity-30 animate-ping delay-200"></span>
+                        class="absolute inline-flex h-8 w-8 rounded-full bg-secondary opacity-50 animate-ping delay-200"></span>
                     <span
-                        class="relative inline-flex rounded-full h-3 w-3 bg-secondary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
+                        class="relative inline-flex rounded-full h-4 w-4 bg-primary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
                     <div
-                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-secondary border border-secondary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-primary border border-primary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
                         <span class="uppercase tracking-wider text-[10px] text-gray-400">West Coast</span>
                         <span class="text-sm">Los Angeles, USA</span>
                         <div
@@ -566,15 +668,15 @@ $txt = $t[$lang];
                     </div>
                 </div>
 
-                <!-- Pin 1c: Chicago - Badge apenas no hover -->
+                <!-- Chicago -->
                 <div
                     class="absolute top-[38%] left-[22%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
                     <span
-                        class="absolute inline-flex h-6 w-6 rounded-full bg-secondary opacity-30 animate-ping delay-400"></span>
+                        class="absolute inline-flex h-8 w-8 rounded-full bg-secondary opacity-50 animate-ping delay-300"></span>
                     <span
-                        class="relative inline-flex rounded-full h-3 w-3 bg-secondary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
+                        class="relative inline-flex rounded-full h-4 w-4 bg-primary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
                     <div
-                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-secondary border border-secondary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-primary border border-primary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
                         <span class="uppercase tracking-wider text-[10px] text-gray-400">Midwest</span>
                         <span class="text-sm">Chicago, USA</span>
                         <div
@@ -583,15 +685,15 @@ $txt = $t[$lang];
                     </div>
                 </div>
 
-                <!-- Pin 1d: Houston - Badge apenas no hover -->
+                <!-- Houston -->
                 <div
                     class="absolute top-[52%] left-[21%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
                     <span
-                        class="absolute inline-flex h-6 w-6 rounded-full bg-secondary opacity-30 animate-ping delay-600"></span>
+                        class="absolute inline-flex h-8 w-8 rounded-full bg-secondary opacity-50 animate-ping delay-400"></span>
                     <span
-                        class="relative inline-flex rounded-full h-3 w-3 bg-secondary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
+                        class="relative inline-flex rounded-full h-4 w-4 bg-primary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
                     <div
-                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-secondary border border-secondary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-primary border border-primary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
                         <span class="uppercase tracking-wider text-[10px] text-gray-400">South</span>
                         <span class="text-sm">Houston, USA</span>
                         <div
@@ -600,18 +702,18 @@ $txt = $t[$lang];
                     </div>
                 </div>
 
-                <!-- Pulsing Pin 2: South America (São Paulo) -->
+
+                <!-- ================= REST OF WORLD (Lighter & Smaller Blue) ================= -->
+
+                <!-- São Paulo (BRA) -->
                 <div
                     class="absolute top-[75%] left-[32%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
                     <span
-                        class="absolute inline-flex h-8 w-8 rounded-full bg-secondary opacity-50 animate-ping delay-300"></span>
+                        class="absolute inline-flex h-6 w-6 rounded-full bg-secondary opacity-30 animate-ping delay-500"></span>
                     <span
-                        class="relative inline-flex rounded-full h-4 w-4 bg-primary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
+                        class="relative inline-flex rounded-full h-3 w-3 bg-secondary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
                     <div
-                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-primary border border-primary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex flex-col items-center">
-                        <span
-                            class="uppercase tracking-wider text-[10px] text-gray-400"><?php echo $txt['loc_latam']; ?>
-                        </span>
+                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-secondary border border-secondary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
                         <span class="text-sm">São Paulo, BRA</span>
                         <div
                             class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white">
@@ -619,18 +721,79 @@ $txt = $t[$lang];
                     </div>
                 </div>
 
-                <!-- Pulsing Pin 3: Europe (Hamburg) -->
+                <!-- Argentina (Buenos Aires approx) -->
+                <div
+                    class="absolute top-[85%] left-[30%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
+                    <span
+                        class="absolute inline-flex h-6 w-6 rounded-full bg-secondary opacity-30 animate-ping delay-550"></span>
+                    <span
+                        class="relative inline-flex rounded-full h-3 w-3 bg-secondary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
+                    <div
+                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-secondary border border-secondary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+                        <span class="text-sm">Buenos Aires, ARG</span>
+                        <div
+                            class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chile (Santiago approx) -->
+                <div
+                    class="absolute top-[82%] left-[27%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
+                    <span
+                        class="absolute inline-flex h-6 w-6 rounded-full bg-secondary opacity-30 animate-ping delay-600"></span>
+                    <span
+                        class="relative inline-flex rounded-full h-3 w-3 bg-secondary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
+                    <div
+                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-secondary border border-secondary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+                        <span class="text-sm">Santiago, CHL</span>
+                        <div
+                            class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panama -->
+                <div
+                    class="absolute top-[58%] left-[23%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
+                    <span
+                        class="absolute inline-flex h-6 w-6 rounded-full bg-secondary opacity-30 animate-ping delay-650"></span>
+                    <span
+                        class="relative inline-flex rounded-full h-3 w-3 bg-secondary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
+                    <div
+                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-secondary border border-secondary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+                        <span class="text-sm">Panama City, PA</span>
+                        <div
+                            class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Honduras -->
+                <div
+                    class="absolute top-[54%] left-[21%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
+                    <span
+                        class="absolute inline-flex h-6 w-6 rounded-full bg-secondary opacity-30 animate-ping delay-700"></span>
+                    <span
+                        class="relative inline-flex rounded-full h-3 w-3 bg-secondary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
+                    <div
+                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-secondary border border-secondary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+                        <span class="text-sm">Tegucigalpa, HND</span>
+                        <div
+                            class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hamburg (DE) -->
                 <div
                     class="absolute top-[28%] left-[51%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
                     <span
-                        class="absolute inline-flex h-8 w-8 rounded-full bg-secondary opacity-50 animate-ping delay-700"></span>
+                        class="absolute inline-flex h-6 w-6 rounded-full bg-secondary opacity-30 animate-ping delay-750"></span>
                     <span
-                        class="relative inline-flex rounded-full h-4 w-4 bg-primary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
+                        class="relative inline-flex rounded-full h-3 w-3 bg-secondary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
                     <div
-                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-primary border border-primary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex flex-col items-center">
-                        <span class="uppercase tracking-wider text-[10px] text-gray-400">
-                            <?php echo $txt['loc_europe']; ?>
-                        </span>
+                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-secondary border border-secondary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
                         <span class="text-sm">Hamburg, DE</span>
                         <div
                             class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white">
@@ -638,18 +801,31 @@ $txt = $t[$lang];
                     </div>
                 </div>
 
-                <!-- Pulsing Pin 4: Middle East (Dubai) -->
+                <!-- Rotterdam (NL) -->
+                <div
+                    class="absolute top-[30%] left-[49%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
+                    <span
+                        class="absolute inline-flex h-6 w-6 rounded-full bg-secondary opacity-30 animate-ping delay-800"></span>
+                    <span
+                        class="relative inline-flex rounded-full h-3 w-3 bg-secondary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
+                    <div
+                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-secondary border border-secondary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+                        <span class="text-sm">Rotterdam, NL</span>
+                        <div
+                            class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dubai (UAE) -->
                 <div
                     class="absolute top-[42%] left-[62%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
                     <span
-                        class="absolute inline-flex h-8 w-8 rounded-full bg-secondary opacity-50 animate-ping delay-1000"></span>
+                        class="absolute inline-flex h-6 w-6 rounded-full bg-secondary opacity-30 animate-ping delay-900"></span>
                     <span
-                        class="relative inline-flex rounded-full h-4 w-4 bg-primary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
+                        class="relative inline-flex rounded-full h-3 w-3 bg-secondary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
                     <div
-                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-primary border border-primary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex flex-col items-center">
-                        <span class="uppercase tracking-wider text-[10px] text-gray-400">
-                            <?php echo $txt['loc_me']; ?>
-                        </span>
+                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-secondary border border-secondary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
                         <span class="text-sm">Dubai, UAE</span>
                         <div
                             class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white">
@@ -657,18 +833,31 @@ $txt = $t[$lang];
                     </div>
                 </div>
 
-                <!-- Pulsing Pin 5: Asia (Shanghai) -->
+                <!-- Singapore -->
+                <div
+                    class="absolute top-[58%] left-[76%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
+                    <span
+                        class="absolute inline-flex h-6 w-6 rounded-full bg-secondary opacity-30 animate-ping delay-1000"></span>
+                    <span
+                        class="relative inline-flex rounded-full h-3 w-3 bg-secondary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
+                    <div
+                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-secondary border border-secondary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+                        <span class="text-sm">Singapore, SG</span>
+                        <div
+                            class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shanghai (CN) -->
                 <div
                     class="absolute top-[38%] left-[80%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center group cursor-pointer z-10">
                     <span
-                        class="absolute inline-flex h-8 w-8 rounded-full bg-secondary opacity-50 animate-ping delay-[1.5s]"></span>
+                        class="absolute inline-flex h-6 w-6 rounded-full bg-secondary opacity-30 animate-ping delay-[1.2s]"></span>
                     <span
-                        class="relative inline-flex rounded-full h-4 w-4 bg-primary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
+                        class="relative inline-flex rounded-full h-3 w-3 bg-secondary border-2 border-white shadow-lg transition-transform hover:scale-125"></span>
                     <div
-                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-primary border border-primary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex flex-col items-center">
-                        <span class="uppercase tracking-wider text-[10px] text-gray-400">
-                            <?php echo $txt['loc_asia']; ?>
-                        </span>
+                        class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white text-secondary border border-secondary/10 text-xs font-bold rounded-lg shadow-xl whitespace-nowrap z-20 flex flex-col items-center opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
                         <span class="text-sm">Shanghai, CN</span>
                         <div
                             class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white">
@@ -680,46 +869,7 @@ $txt = $t[$lang];
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
-                <div class="w-full lg:w-1/2">
-                    <img src="assets/images/sliders/freteaereo-delphifretes.jpg"
-                        onerror="this.src='https://images.unsplash.com/photo-1566576912906-25433db91384?ixlib=rb-4.0.3'"
-                        alt="Team" class="rounded-3xl shadow-xl w-full">
-                </div>
-                <div class="w-full lg:w-1/2">
-                    <span
-                        class="text-secondary font-bold tracking-wider uppercase text-sm"><?php echo $txt['about_sub']; ?></span>
-                    <h2 class="text-4xl font-heading font-bold text-[#1a5f7a] mt-2 mb-6">
-                        <?php echo $txt['about_title']; ?>
-                    </h2>
-                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-                        <?php echo $txt['about_desc']; ?>
-                    </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 text-gray-700">
-                            <i class="fa-solid fa-check-circle text-secondary text-xl"></i>
-                            <?php echo $txt['feat_tracking']; ?>
-                        </li>
-                        <li class="flex items-center gap-3 text-gray-700">
-                            <i class="fa-solid fa-check-circle text-secondary text-xl"></i>
-                            <?php echo $txt['feat_network']; ?>
-                        </li>
-                        <li class="flex items-center gap-3 text-gray-700">
-                            <i class="fa-solid fa-check-circle text-secondary text-xl"></i>
-                            <?php echo $txt['feat_success']; ?>
-                        </li>
-                    </ul>
-                    <a href="#"
-                        class="inline-block mt-8 px-8 py-3 bg-gray-100 text-primary font-bold rounded-lg hover:bg-gray-200 transition-colors">
-                        <?php echo $txt['about_btn']; ?>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Services Section -->
     <section id="services" class="py-24 bg-gray-50">
@@ -810,13 +960,14 @@ $txt = $t[$lang];
                 <div>
                     <span
                         class="text-secondary font-bold tracking-wider uppercase text-sm"><?php echo $txt['quote_sub']; ?></span>
-                    <h2 class="text-4xl font-heading font-bold mt-2 mb-6"><?php echo $txt['quote_title']; ?></h2>
+                    <h2 class="text-4xl font-heading font-bold mt-2 mb-6 text-white"><?php echo $txt['quote_title']; ?>
+                    </h2>
                     <p class="text-lg text-gray-300 mb-8"><?php echo $txt['quote_desc']; ?></p>
                     <ul class="space-y-4">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-secondary"></i> +1 (555)
-                            123-4567</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-secondary"></i> +1
+                            305-901-5931</li>
                         <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-secondary"></i>
-                            info@pythonlogistics.com</li>
+                            pricing@pythonlogistics.com</li>
                     </ul>
                 </div>
 
@@ -908,61 +1059,8 @@ $txt = $t[$lang];
     <!-- Footer -->
     <!-- Footer -->
     <!-- Footer -->
-    <footer class="bg-[#36b5e8] pt-16 pb-8 border-t border-[#36b5e8] relative text-white">
-        <!-- Background Layers matching Quote Section -->
-        <div class="absolute inset-0 bg-primary opacity-50 mix-blend-multiply"></div>
-        <div class="absolute inset-0 bg-[url('assets/images/backgrounds/5.jpg')] bg-cover bg-fixed opacity-20"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class=" grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-                <div>
-                    <img src="https://pythonlogistics.com/wp-content/uploads/2020/10/logo-python.png" alt="Python"
-                        class="h-8 mb-6 brightness-0 invert">
-                    <p class="text-gray-300 mb-6">
-                        <?php echo $txt['footer_desc']; ?>
-                    </p>
-                    <div class="flex gap-4 text-white/60">
-                        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="font-bold text-white mb-6">
-                        <?php echo $txt['quick_links']; ?>
-                    </h4>
-                    <ul class="space-y-3 text-gray-300">
-                        <li><a href="#" class="hover:text-white transition-colors"><?php echo $txt['nav_home']; ?></a>
-                        </li>
-                        <li><a href="#about" class="hover:text-white transition-colors">
-                                <?php echo $txt['nav_about']; ?>
-                            </a></li>
-                        <li><a href="#services"
-                                class="hover:text-white transition-colors"><?php echo $txt['nav_services']; ?></a></li>
-                        <li><a href=" #quote" class="hover:text-white transition-colors">
-                                <?php echo $txt['nav_quote']; ?>
-                            </a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-white mb-6">
-                        <?php echo $txt['contact_us']; ?>
-                    </h4>
-                    <ul class="space-y-3 text-gray-300">
-                        <li><i class="fa-solid fa-location-dot mr-2 text-secondary"></i> 1915 NW 79th Avenue - Doral, FL
-                            33126</li>
-                        <li><i class="fa-solid fa-phone mr-2 text-secondary"></i> +1 305-901-5931</li>
-                        <li><i class="fa-solid fa-envelope mr-2 text-secondary"></i> contact@pythonlogistics.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-center pt-8 border-t border-[#36b5e8] text-gray-400">
-                <p>
-                    <?php echo $txt['copyright']; ?>
-                </p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer -->
+    <?php include 'includes/footer.php'; ?>
 
     <!-- WIDGETS -->
 
